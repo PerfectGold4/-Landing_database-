@@ -1,11 +1,14 @@
-header {background: #008B8B; padding: 15px 10px 20px 20px;}
-footer {background: #008B8B; padding: 10px 10px 10px 10px;}
+header, footer {padding: 15px 10px 20px 20px; background-image: url(back.png); background-repeat: repeat-x;}
+main {background-image: url(body.png); background-repeat: repeat-x;}
 
-img#a1 {width:50%; max-height: 20%}
-p.center {width:50%;float:left;}
+img#a1 {}
+p#img {display: flex; justify-content: center; align-items: flex-start; padding: 40px 0px;}
+
+img#logo {float:left; width: 30px; height: 30px; margin: 5px 15px 10px 0px;}
+
 h1 {float:left; width: 65%; font-size: 30px; text-transform: uppercase;}
+
+p.center {width:50%;float:left;}
+
 nav{text-align: right; display: flex}
 nav a{margin: 0 20px; font: italic small-caps 20px/1.5 Arial;}
-img#logo {float:left; width: 40px; height: 40px; margin: 0px 15px 10px 10px;}
-
-#20B2AA
