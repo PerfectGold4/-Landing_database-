@@ -1,9 +1,12 @@
-header {padding: 2px 10px 2px 5px; background: black;}
-article {background-image: url(bback.jpg); background-size: auto; background-repeat: no-repeat;}
-section {background: black}
+header {padding: 2px 10px 2px 5px; background:black;}
+article#a {background-image:url(bback.jpg); background-size:auto; background-repeat:no-repeat;}
+article#b {background-image:url(bbback.jpg); background-size:auto; background-repeat:no-repeat;}
+section {background:black}
 
-img#a1 {display: flex; justify-content: center; align-items: flex-start; padding: 40px 0px;}
+img#a1 {display:flex; justify-content:center; align-items:flex-start; padding: 40px 0px;}
 
 p.h {text-align: center; font-size: 10px; text-transform: uppercase; color: white; letter-spacing: 3px;}
-p.first {text-align: center; font-size: 30px; padding: 160px 0px}
-p.center {width:50%;float:left;color:white}
+p.first {text-align:center; font-size:30px; padding: 160px 0px}
+
+p.center {width:50%; float:left; color:white; padding: 60px 20px; margin-right: 100px; text-indent: 20px}
+p.center span.class1 {font-weight:bold; font-size:35px; text-transform:uppercase;}
