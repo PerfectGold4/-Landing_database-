@@ -1,13 +1,15 @@
 header {padding: 2px 10px 2px 5px; background:black;}
+footer {text-align: center; color: white; background: black}
 
 %back {background-size:auto; background-repeat:no-repeat;}
-article#a {@extend %back; background-image: url(bback.jpg);}
-article#b {@extend %back; background-image: url(bbback.jpg);}
+article#a {@extend %back; background-image: url(pics/bback.jpg);}
+article#b {@extend %back; background-image: url(pics/bbback.jpg);}
 
 .firs {background:black;}
 .sec {background: white}
 
-img#a1 {display:flex; justify-content:center; align-items:flex-start; padding: 40px 0px;}
+img.a1 {display:flex; justify-content:center; align-items:flex-start; padding: 40px 0px;}
+img.a2 {display:flex; justify-content:center; align-items:flex-start; padding: 50px 20px 60px 0px; max-height: 250px}
 
 p.h {text-align: center; font-size: 10px; text-transform: uppercase; color: white; letter-spacing: 3px;}
 p.first {text-align:center; font-size:30px; padding: 160px 0px;}
@@ -15,5 +17,5 @@ p.first {text-align:center; font-size:30px; padding: 160px 0px;}
 .center { width:50%; float:left; color:white; padding: 60px 20px; margin-right: 100px; text-indent: 20px;}
 .center span.class1 {font-weight:bold; font-size:35px; text-transform:uppercase;}
 
-.under { width:50%; float:left; color:black; padding: 60px 20px; margin-right: 100px; text-indent: 20px;}
+.under { width:50%; float:left; color:black; padding: 100px 20px 60px 150px; margin-right: 100px; text-indent: 20px;}
 .under span.class1 {font-weight:bold; font-size:35px; text-transform:uppercase;}
