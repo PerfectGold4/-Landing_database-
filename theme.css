@@ -1,4 +1,10 @@
-header {padding: 2px 10px 2px 5px; background:black;}
+header {height: 30px;padding-top: 10px;padding: 0px 5px;  background:black; color: white;}
+
+/*@mixin head {font-size: 10px; text-transform: uppercase; display: inline-block; float: left;}*/
+header a {text-align: left; width: 20%; float: left; font-size: 20px;}
+p.mid {text-align: center; letter-spacing: 3px; width: 60%; float: left; font-size: 20px;}
+p.tel {text-align: right; letter-spacing: 3px; width: 20%; float: left; font-size: 20px;}
+
 footer {text-align: center; color: white; background: black}
 
 %back {background-size:auto; background-repeat:no-repeat;}
@@ -6,12 +12,11 @@ article#a {@extend %back; background-image: url(pics/bback.jpg);}
 article#b {@extend %back; background-image: url(pics/bbback.jpg);}
 
 .firs {background-image: url(pics/body.png);}
-.sec {background: white}
+.sec {background: white;}
 
 img.a1 {display:flex; justify-content:center; align-items:flex-start; padding: 40px 0px;}
 img.a2 {display:flex; justify-content:center; align-items:flex-start; padding: 50px 20px 60px 0px; max-height: 250px}
 
-p.h {text-align: center; font-size: 10px; text-transform: uppercase; color: white; letter-spacing: 3px;}
 p.first {text-align:center; font-size:30px; padding: 160px 0px;}
 
 .center { width:50%; float:left; color:white; padding: 60px 20px; margin-right: 100px; text-indent: 20px;}
