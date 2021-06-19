@@ -1,0 +1,73 @@
+$color-one: white;
+$color-two: black;
+
+@mixin head($text-align, $width, $letter-spacing)  {
+													float: left; 
+													font-size: 20px; 
+													text-align: $text-align; 
+													width: $width; 
+													letter-spacing: $letter-spacing}
+@mixin back($back-img) {
+						background-image: $back-img;
+						background-size:auto;
+						background-repeat:no-repeat;}
+@mixin header-section {
+						font-weight:bold;
+				 		font-size:35px;
+				 		text-transform:uppercase;}
+header {
+		a{@include head(left, 20%, 0px);}
+		p.mid{@include head(center, 60%, 3px);}
+		p.tel{@include head(right, 20%, 3px);}
+		height: 30px;
+		padding: 10px 15px 5px 15px;
+		background: $color-two;
+		color: $color-one;}
+
+#a { 
+	 p{text-align:center;
+	   font-size:30px;
+	   padding: 160px 0px;}
+	 @include back(url(../pics/first-back.jpg));}
+
+.firs { 
+		p{ 
+		  span{@include header-section;}
+		  width:50%;
+		  float:left;
+		  padding: 60px 20px;
+		  margin-right: 100px;
+		  text-indent: 20px;}
+		background: $color-two; 
+		color: $color-one;}
+	.prod {
+			display:flex;
+			justify-content:center;
+			align-items:flex-start;
+			padding: 40px 0px;}
+
+#b {
+	p{
+	  text-align:center;
+	  font-size:30px;
+	  padding: 160px 0px;}
+	@include back(url(../pics/second-back.jpg));}
+
+.sec {	
+		p{
+			span{@include header-section;}
+			width:50%;
+			float:left;
+			padding: 60px 20px;
+			margin-right: 100px;
+			text-indent: 20px;}
+		background: $color-one;
+		color: $color-two;}
+	.inf {
+			@extend .prod;
+			padding: 10px 20px 20px 0px;
+			max-height: 250px}
+
+#c figure{overflow:auto; display: flex;}
+
+footer {text-align: center; color: $color-one; background: $color-two;}

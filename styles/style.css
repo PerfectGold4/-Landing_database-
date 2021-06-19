@@ -1,0 +1,90 @@
+header {
+  height: 30px;
+  padding: 10px 15px 5px 15px;
+  background: black;
+  color: white; }
+  header a {
+    float: left;
+    font-size: 20px;
+    text-align: left;
+    width: 20%;
+    letter-spacing: 0px; }
+  header p.mid {
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    width: 60%;
+    letter-spacing: 3px; }
+  header p.tel {
+    float: left;
+    font-size: 20px;
+    text-align: right;
+    width: 20%;
+    letter-spacing: 3px; }
+
+#a {
+  background-image: url(../pics/first-back.jpg);
+  background-size: auto;
+  background-repeat: no-repeat; }
+  #a p {
+    text-align: center;
+    font-size: 30px;
+    padding: 160px 0px; }
+
+.firs {
+  background: black;
+  color: white; }
+  .firs p {
+    width: 50%;
+    float: left;
+    padding: 60px 20px;
+    margin-right: 100px;
+    text-indent: 20px; }
+    .firs p span {
+      font-weight: bold;
+      font-size: 35px;
+      text-transform: uppercase; }
+
+.prod, .inf {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0px; }
+
+#b {
+  background-image: url(../pics/second-back.jpg);
+  background-size: auto;
+  background-repeat: no-repeat; }
+  #b p {
+    text-align: center;
+    font-size: 30px;
+    padding: 160px 0px; }
+
+.sec {
+  background: white;
+  color: black; }
+  .sec p {
+    width: 50%;
+    float: left;
+    padding: 60px 20px;
+    margin-right: 100px;
+    text-indent: 20px; }
+    .sec p span {
+      font-weight: bold;
+      font-size: 35px;
+      text-transform: uppercase; }
+
+.inf {
+  padding: 10px 20px 20px 0px;
+  max-height: 250px; }
+
+#c figure {
+  overflow: auto;
+  display: flex; }
+
+footer {
+  text-align: center;
+  color: white;
+  background: black; }
+
+/*# sourceMappingURL=style.css.map */
