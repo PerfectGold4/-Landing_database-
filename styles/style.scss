@@ -1,5 +1,7 @@
-$color-one: white;
-$color-two: black;
+$text: white;
+$back: #708090;
+$back-sect: white;
+$text-sect: black;
 
 @mixin head($text-align, $width, $letter-spacing)  {
 													float: left; 
@@ -21,8 +23,8 @@ header {
 		p.tel{@include head(right, 20%, 3px);}
 		height: 30px;
 		padding: 10px 15px 5px 15px;
-		background: $color-two;
-		color: $color-one;}
+		background: $back;
+		color: $text;}
 
 #a { 
 	 p{text-align:center;
@@ -38,13 +40,28 @@ header {
 		  padding: 60px 20px;
 		  margin-right: 100px;
 		  text-indent: 20px;}
-		background: $color-two; 
-		color: $color-one;}
-	.prod {
-			display:flex;
-			justify-content:center;
-			align-items:flex-start;
-			padding: 40px 0px;}
+		background: $back; 
+		color: $text;}
+	
+
+
+	.one {
+			float: left;
+			margin: 60px 5% 60px 15%;
+			width: 20%;
+			height: width;}
+	.two {
+			float: left;
+			margin: 60px 5% 60px 0px;
+			width: 20%;
+			height: width;}
+	.three {
+			margin: 60px 15% 60px 0px;
+			width: 20%;
+			height: width;}
+
+
+
 
 #b {
 	p{
@@ -61,13 +78,13 @@ header {
 			padding: 60px 20px;
 			margin-right: 100px;
 			text-indent: 20px;}
-		background: $color-one;
-		color: $color-two;}
+		background: $back-sect;
+		color: $text-sect;}
 	.inf {
-			@extend .prod;
+			padding: 40px 0px;
 			padding: 10px 20px 20px 0px;
 			max-height: 250px}
 
 #c figure{overflow:auto; display: flex;}
 
-footer {text-align: center; color: $color-one; background: $color-two;}
+footer {text-align: center; color: $text; background: $back;}
