@@ -2,7 +2,7 @@ header {
   height: 30px;
   padding: 10px 15px 5px 15px;
   background: #708090;
-  color: white; }
+  color: #F0F8FF; }
   header a {
     float: left;
     font-size: 20px;
@@ -27,13 +27,19 @@ header {
   background-size: auto;
   background-repeat: no-repeat; }
   #a p {
+    color: white;
     text-align: center;
-    font-size: 30px;
-    padding: 160px 0px; }
+    font-size: 60px;
+    padding: 100px 0px;
+    font-weight: bold;
+    letter-spacing: 2px; }
+    #a p span {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 3px 1px 4px 1px; }
 
 .firs {
   background: #708090;
-  color: white; }
+  color: #F0F8FF; }
   .firs p {
     width: 50%;
     float: left;
@@ -66,10 +72,9 @@ header {
   background-image: url(../pics/second-back.jpg);
   background-size: auto;
   background-repeat: no-repeat; }
-  #b p {
-    text-align: center;
-    font-size: 30px;
-    padding: 160px 0px; }
+  #b img {
+    padding: 100px 5%;
+    width: 90%; }
 
 .sec {
   background: white;
@@ -86,17 +91,19 @@ header {
       text-transform: uppercase; }
 
 .inf {
-  padding: 40px 0px;
-  padding: 10px 20px 20px 0px;
+  padding: 80px 0px;
   max-height: 250px; }
 
 #c figure {
   overflow: auto;
   display: flex; }
+  #c figure img {
+    max-height: 500px;
+    max-width: 500px; }
 
 footer {
   text-align: center;
-  color: white;
+  color: #F0F8FF;
   background: #708090; }
 
 /*# sourceMappingURL=style.css.map */

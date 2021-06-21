@@ -1,4 +1,4 @@
-$text: white;
+$text: #F0F8FF;
 $back: #708090;
 $back-sect: white;
 $text-sect: black;
@@ -27,9 +27,15 @@ header {
 		color: $text;}
 
 #a { 
-	 p{text-align:center;
-	   font-size:30px;
-	   padding: 160px 0px;}
+	 p{
+	   span{background: rgba(0, 0, 0, 0.5);
+	   padding: 3px 1px 4px 1px;}
+	   color: $back-sect;
+	   text-align:center;
+	   font-size:60px;
+	   padding: 100px 0px;
+	   font-weight: bold;
+	   letter-spacing: 2px;}
 	 @include back(url(../pics/first-back.jpg));}
 
 .firs { 
@@ -64,10 +70,8 @@ header {
 
 
 #b {
-	p{
-	  text-align:center;
-	  font-size:30px;
-	  padding: 160px 0px;}
+	img{padding: 100px 5%;
+		width: 90%;}
 	@include back(url(../pics/second-back.jpg));}
 
 .sec {	
@@ -81,10 +85,11 @@ header {
 		background: $back-sect;
 		color: $text-sect;}
 	.inf {
-			padding: 40px 0px;
-			padding: 10px 20px 20px 0px;
+			padding: 80px 0px;
 			max-height: 250px}
 
-#c figure{overflow:auto; display: flex;}
+#c figure{	img{ max-height: 500px; max-width: 500px;}
+			overflow:auto; 
+			display: flex;}
 
 footer {text-align: center; color: $text; background: $back;}
