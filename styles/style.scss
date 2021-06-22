@@ -1,36 +1,35 @@
-$text: #F0F8FF;
-$back: #708090;
-$back-sect: white;
-$text-sect: black;
-
 @mixin head($text-align, $width, $letter-spacing)  {
-													float: left; 
-													font-size: 20px; 
-													text-align: $text-align; 
-													width: $width; 
-													letter-spacing: $letter-spacing}
+	float: left; 
+	font-size: 20px; 
+	text-align: $text-align; 
+	width: $width; 
+	letter-spacing: $letter-spacing;}
 @mixin back($back-img) {
-						background-image: $back-img;
-						background-size:auto;
-						background-repeat:no-repeat;}
-@mixin header-section {
-						font-weight:bold;
-				 		font-size:35px;
-				 		text-transform:uppercase;}
-header {
-		a{@include head(left, 20%, 0px);}
-		p.mid{@include head(center, 60%, 3px);}
-		p.tel{@include head(right, 20%, 3px);}
-		height: 30px;
-		padding: 10px 15px 5px 15px;
-		background: $back;
-		color: $text;}
+	background-image: $back-img;
+	background-size:auto;
+	background-repeat:no-repeat;}
+@mixin sec-sect($pad, $size, $text-indent, $margin-right, $font-weight, $text-transform: none) {
+	float: left;
+	padding: $pad;
+	font-size: $size;
+	text-indent: $text-indent;
+	margin-right: $margin-right;
+	font-weight: $font-weight;
+	text-transform: $text-transform;}
 
-#a { 
-	 p{
-	   span{background: rgba(0, 0, 0, 0.5);
-	   padding: 3px 1px 4px 1px;}
-	   color: $back-sect;
+header {
+	p{@include head(center, 100%, 3px);}
+	height: 30px;
+	padding: 10px 15px 5px 15px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #F0F8FF;}
+
+#first {
+	p{
+	   span{
+	   	background: rgba(0, 0, 0, 0.5);
+	   	padding: 3px 1px 4px 1px;}
+	   color: white;
 	   text-align:center;
 	   font-size:60px;
 	   padding: 100px 0px;
@@ -38,58 +37,69 @@ header {
 	   letter-spacing: 2px;}
 	 @include back(url(../pics/first-back.jpg));}
 
-.firs { 
-		p{ 
-		  span{@include header-section;}
-		  width:50%;
-		  float:left;
-		  padding: 60px 20px;
-		  margin-right: 100px;
-		  text-indent: 20px;}
-		background: $back; 
-		color: $text;}
-	
-
-
+#second {
+	background: rgba(0, 0, 0, 0.5);
 	.one {
-			float: left;
-			margin: 60px 5% 60px 15%;
-			width: 20%;
-			height: width;}
+		float: left;
+		margin: 60px 5% 60px 15%;
+		width: 20%;
+		height: width;}
 	.two {
-			float: left;
-			margin: 60px 5% 60px 0px;
-			width: 20%;
-			height: width;}
+		float: left;
+		margin: 60px 5% 60px 0px;
+		width: 20%;
+		height: width;}
 	.three {
-			margin: 60px 15% 60px 0px;
-			width: 20%;
-			height: width;}
+		margin: 60px 15% 60px 0px;
+		width: 20%;
+		height: width;} }
 
-
-
-
-#b {
-	img{padding: 100px 5%;
+#third {
+	img{
+		padding: 100px 5%;
 		width: 90%;}
 	@include back(url(../pics/second-back.jpg));}
 
-.sec {	
-		p{
-			span{@include header-section;}
-			width:50%;
-			float:left;
-			padding: 60px 20px;
-			margin-right: 100px;
-			text-indent: 20px;}
-		background: $back-sect;
-		color: $text-sect;}
+#fourth {	
+	.head-sect {
+		@include sec-sect(80px 0px 0px 15%, 33px, 0px, 0px, bold, uppercase);}
+	.inf-sect{
+		@include sec-sect(0px 15px 60px 17%, 18px, 20px, 200px, normal);
+		width:30%;}
+	background: white;
 	.inf {
-			padding: 80px 0px;
-			max-height: 250px}
+		padding: 80px 0px;
+		max-height: 250px;}}
 
-#c figure{	img{ max-height: 500px; max-width: 500px;}
-			overflow:auto; 
-			display: flex;}
+#fifth figure{	
+	img{ max-height: 500px; max-width: 500px;}
+	overflow:auto; 
+	display: flex;}
 
-footer {text-align: center; color: $text; background: $back;}
+section {
+	form {
+		img{
+			width: 100px;
+			float: left}
+		p{
+			width: 300px;
+			height: 100px;
+			float: left;}
+		button{
+			width: 400px;
+			height: 200px;}
+		}
+}
+
+#sixth {
+	background: #9ACD32;
+	img{
+		padding: 60px 0px 60px 200px;
+		max-height: 200px;}
+	p{
+		float:right;
+		display:inline-block;
+		width: 50%;
+		padding:113px 100px}
+	}
+
