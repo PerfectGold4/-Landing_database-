@@ -8,7 +8,7 @@
 	background-image: $back-img;
 	background-size:auto;
 	background-repeat:no-repeat;}
-@mixin sec-sect($pad, $size, $text-indent, $margin-right, $font-weight, $text-transform: none) {
+@mixin fourth($pad, $size, $text-indent, $margin-right, $font-weight, $text-transform: none) {
 	float: left;
 	padding: $pad;
 	font-size: $size;
@@ -16,6 +16,13 @@
 	margin-right: $margin-right;
 	font-weight: $font-weight;
 	text-transform: $text-transform;}
+@mixin section ($width, $height, $margin, $float) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+	float: $float;
+	display: flex;
+	align-items: center;}
 
 header {
 	p{@include head(center, 100%, 3px);}
@@ -62,9 +69,9 @@ header {
 
 #fourth {	
 	.head-sect {
-		@include sec-sect(80px 0px 0px 15%, 33px, 0px, 0px, bold, uppercase);}
+		@include fourth(80px 0px 0px 15%, 33px, 0px, 0px, bold, uppercase);}
 	.inf-sect{
-		@include sec-sect(0px 15px 60px 17%, 18px, 20px, 200px, normal);
+		@include fourth(0px 15px 60px 17%, 18px, 20px, 200px, normal);
 		width:30%;}
 	background: white;
 	.inf {
@@ -72,27 +79,38 @@ header {
 		max-height: 250px;}}
 
 #fifth figure{	
-	img{ max-height: 500px; max-width: 500px;}
+	img{
+		max-height: 250px;
+		margin: 60px 30px;}
 	overflow:auto; 
 	display: flex;}
 
 section {
-	form {
-		img{
-			width: 100px;
-			float: left}
-		p{
-			width: 300px;
-			height: 100px;
-			float: left;}
-		button{
-			width: 400px;
-			height: 200px;}
+	background: #7FFFD4;
+	padding: 25px 100px;
+	#products {
+		border: 2px dashed black;
+		div{
+			display: flex;
+ 	 		justify-content: space-evenly;
+			img{@include section (300px, 150px, 25px 0px, left)}
+			p{
+				@include section (300px, 150px, auto 0px, left);
+				padding: auto 0px;}
+			button{
+				&:active{box-shadow: 0px 0px}
+				&:hover{background: #00FF00}
+				@include section (200px, 100px, auto 0px, left);
+				clear: left;
+				background: #32CD32;
+				border: 1px solid #32CD32;
+				border-radius: 2px;
+				box-shadow: 3px 5px 5px #999;}
 		}
-}
-
+	}}				
+				
 #sixth {
-	background: #9ACD32;
+	background: #FF7F50;
 	img{
 		padding: 60px 0px 60px 200px;
 		max-height: 200px;}

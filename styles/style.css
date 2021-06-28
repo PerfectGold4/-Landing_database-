@@ -77,22 +77,51 @@ header {
   overflow: auto;
   display: flex; }
   #fifth figure img {
-    max-height: 500px;
-    max-width: 500px; }
+    max-height: 250px;
+    margin: 60px 30px; }
 
-section form img {
-  width: 100px;
-  float: left; }
-section form p {
-  width: 300px;
-  height: 100px;
-  float: left; }
-section form button {
-  width: 400px;
-  height: 200px; }
+section {
+  background: #7FFFD4;
+  padding: 25px 100px; }
+  section #products {
+    border: 2px dashed black; }
+    section #products div {
+      display: flex;
+      justify-content: space-evenly; }
+      section #products div img {
+        width: 300px;
+        height: 150px;
+        margin: 25px 0px;
+        float: left;
+        display: flex;
+        align-items: center; }
+      section #products div p {
+        width: 300px;
+        height: 150px;
+        margin: auto 0px;
+        float: left;
+        display: flex;
+        align-items: center;
+        padding: auto 0px; }
+      section #products div button {
+        width: 200px;
+        height: 100px;
+        margin: auto 0px;
+        float: left;
+        display: flex;
+        align-items: center;
+        clear: left;
+        background: #32CD32;
+        border: 1px solid #32CD32;
+        border-radius: 2px;
+        box-shadow: 3px 5px 5px #999; }
+        section #products div button:active {
+          box-shadow: 0px 0px; }
+        section #products div button:hover {
+          background: #00FF00; }
 
 #sixth {
-  background: #9ACD32; }
+  background: #FF7F50; }
   #sixth img {
     padding: 60px 0px 60px 200px;
     max-height: 200px; }
