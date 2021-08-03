@@ -1,26 +1,23 @@
-header {
+header p {
+  font-size: 20px;
   height: 30px;
   padding: 10px 15px 5px 15px;
   background: rgba(0, 0, 0, 0.5);
-  color: #F0F8FF; }
-  header p {
-    float: left;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-    letter-spacing: 3px; }
+  color: #F0F8FF;
+  text-align: center;
+  letter-spacing: 3px; }
 
 #first {
   background-image: url(../pics/first-back.jpg);
-  background-size: auto;
+  background-size: 100% auto;
   background-repeat: no-repeat; }
   #first p {
     color: white;
     text-align: center;
-    font-size: 60px;
-    padding: 100px 0px;
     font-weight: bold;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    font-size: 60px;
+    padding: 100px 0px; }
     #first p span {
       background: rgba(0, 0, 0, 0.5);
       padding: 3px 1px 4px 1px; }
@@ -29,49 +26,45 @@ header {
   background: rgba(0, 0, 0, 0.5); }
   #second .one {
     float: left;
-    margin: 60px 5% 60px 15%;
     width: 20%;
-    height: width; }
+    margin: 60px 5% 60px 15%; }
   #second .two {
     float: left;
-    margin: 60px 5% 60px 0px;
     width: 20%;
-    height: width; }
+    margin: 60px 5% 60px 0px; }
   #second .three {
-    margin: 60px 15% 60px 0px;
+    float: none;
     width: 20%;
-    height: width; }
+    margin: 60px 15% 60px 0px; }
 
 #third {
   background-image: url(../pics/second-back.jpg);
-  background-size: auto;
+  background-size: 100% auto;
   background-repeat: no-repeat; }
   #third img {
-    padding: 100px 5%;
+    padding: 20px 5%;
     width: 90%; }
 
 #fourth {
   background: white; }
-  #fourth .head-sect {
+  #fourth p {
     float: left;
-    padding: 80px 0px 0px 15%;
-    font-size: 33px;
-    text-indent: 0px;
-    margin-right: 0px;
-    font-weight: bold;
-    text-transform: uppercase; }
-  #fourth .inf-sect {
-    float: left;
-    padding: 0px 15px 60px 17%;
-    font-size: 18px;
-    text-indent: 20px;
-    margin-right: 200px;
-    font-weight: normal;
-    text-transform: none;
-    width: 30%; }
+    width: 35%;
+    margin-left: 15%;
+    margin-top: 20px; }
+    #fourth p .head-sect {
+      padding-left: 3%;
+      font-size: 33px;
+      font-weight: bold;
+      text-transform: uppercase; }
+    #fourth p .inf-sect {
+      padding-left: 5%;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: none; }
   #fourth .inf {
-    padding: 80px 0px;
-    max-height: 250px; }
+    padding: 10px 15%;
+    max-height: 200px; }
 
 #fifth figure {
   overflow: auto;
@@ -80,45 +73,64 @@ header {
     max-height: 250px;
     margin: 60px 30px; }
 
+#element::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #18aaaa; }
+
+#element::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd; }
+
 section {
   background: #7FFFD4;
-  padding: 25px 100px; }
-  section #products {
-    border: 2px dashed black; }
-    section #products div {
+  padding: 25px 10%; }
+  section #products div {
+    display: flex;
+    justify-content: space-evenly; }
+    section #products div img {
+      width: 300px;
+      height: 150px;
+      margin: 25px 0px;
+      float: left;
       display: flex;
-      justify-content: space-evenly; }
-      section #products div img {
-        width: 300px;
-        height: 150px;
-        margin: 25px 0px;
-        float: left;
-        display: flex;
-        align-items: center; }
-      section #products div p {
-        width: 300px;
-        height: 150px;
-        margin: auto 0px;
-        float: left;
-        display: flex;
-        align-items: center;
-        padding: auto 0px; }
-      section #products div button {
-        width: 200px;
-        height: 100px;
-        margin: auto 0px;
+      align-items: center; }
+    section #products div p {
+      width: 300px;
+      height: 150px;
+      margin: auto 0px;
+      float: left;
+      display: flex;
+      align-items: center;
+      padding: auto 0px;
+      text-align: center;
+      font-size: 18px; }
+    section #products div button {
+      width: 200px;
+      height: 100px;
+      margin: auto 0px;
+      float: left;
+      display: flex;
+      align-items: center;
+      clear: left;
+      background: #32CD32;
+      border: 1px solid #32CD32;
+      border-radius: 2px;
+      box-shadow: 3px 5px 5px #999; }
+      section #products div button p {
+        width: auto;
+        height: 50px;
+        margin: auto auto;
         float: left;
         display: flex;
         align-items: center;
         clear: left;
-        background: #32CD32;
-        border: 1px solid #32CD32;
-        border-radius: 2px;
-        box-shadow: 3px 5px 5px #999; }
-        section #products div button:active {
-          box-shadow: 0px 0px; }
-        section #products div button:hover {
-          background: #00FF00; }
+        justify-content: space-around;
+        font-size: 20px; }
+      section #products div button:active {
+        box-shadow: 0px 0px; }
+      section #products div button:hover {
+        background: #00FF00; }
 
 #sixth {
   background: #FF7F50; }
@@ -130,5 +142,57 @@ section {
     display: inline-block;
     width: 50%;
     padding: 113px 100px; }
+
+footer {
+  background: rgba(0, 0, 0, 0.5); }
+  footer p {
+    display: flex;
+    justify-content: space-around;
+    font-size: 21px;
+    padding: 3px 0px; }
+    footer p a:link {
+      color: white;
+      text-decoration: none; }
+    footer p a:visited {
+      color: white;
+      text-decoration: none; }
+
+@media (max-width: 1090px) {
+  #first p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    padding: 60px 0px; }
+    #first p span {
+      padding: 0px 0px; }
+
+  #fourth p {
+    margin-left: 5%; }
+    #fourth p .head-sect {
+      padding-left: 1%;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase; }
+    #fourth p .inf-sect {
+      padding-left: 3%;
+      font-size: 10px;
+      font-weight: normal;
+      text-transform: none; }
+  #fourth .inf {
+    padding: 40px 50px;
+    max-height: 150px; }
+
+  section {
+    padding: 9px 1% !important; }
+    section div img {
+      width: 0px !important; }
+
+  #sixth img {
+    padding-left: 20px !important;
+    max-height: 150px; }
+  #sixth p {
+    padding: 30px 0px; } }
 
 /*# sourceMappingURL=style.css.map */
