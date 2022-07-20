@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="shortcut icon" href="files/pictures/im/logo.png">
+	<link rel="stylesheet" type="text/css" href="files/styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="files/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/jquery-ui.js"></script>
+	<script src="files/script/Transit.js"></script>
 </head>
+
 <body>
+	
 	<header>
 		<p>Название</p>
 	</header>
 	
 	<main>
+		<article class="fin_hid">
+			<img src="files/pictures/im/close.png" id="for_fh">
+			<div><p id="ft">Спасибо! Наш работник свяжется с вами.</p></div>
+		</article>
+		<div class="back_hid">
+			<article class="hid" id="hidden_1">
+				<img src="files/pictures/im/close.png" id="for_h_1">
+				<div><p id="t">Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я</p></div>
+				<form>
+					<div><p id="e">Введите ваш е-mail: </p><input type="" name=""></div>
+					<input type="button" class="butt"></input>
+				</form>
+			</article>
+		</div>
+		<article class="hid" id="hidden_2">
+			<img src="files/pictures/im/close.png" id="for_h_2">
+			<div><p id="t">Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь</p></div>
+			<form>
+				<div><p id="e">Введите ваш е-mail: </p><input type="" name=""></div>
+				<input type="button" class="butt"></input>
+			</form>
+		</article>
+		<article class="hid" id="hidden_3">
+			<img src="files/pictures/im/close.png" id="for_h_3">
+			<div><p id="t">Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры</p></div>
+			<form>
+				<div><p id="e">Введите ваш е-mail: </p><input type="" name=""></div>
+				<input type="button" class="butt"></input>
+			</form>
+		</article>
 
 		<article id="first">
 			<p><span>"Мы принесём красоту в&nbsp;ваш&nbsp;мир!"</span></p>
 		</article>
 
 		<article id="second">
-				<img class="one" src="pics/01.png">
-				<img class="two" src="pics/01.png">
-				<img class="three" src="pics/01.png">
+				<img class="one" src="files/pictures/im/01.png">
+				<img class="two" src="files/pictures/im/02.png">
+				<img class="three" src="files/pictures/im/03.png">
 		</article>
 		
 		<article id="third">
-			<img src="pics/letters-on.png">
+			<img src="files/pictures/im/letters-on.png">
 		</article>
 
 		<article id="fourth">
@@ -34,46 +72,42 @@
 				Работу над вашей проблемой будет вести группа наших лучших дизайнеров, из их вариантов будет выбираться стиль подходящий вам больше всего. В крайнем случае вы сможете сами выбрать себе стиль который понравится лично вам. Каждый наш сотрудник был проверен временем, и каждый наш клиент не был обделен вниманием - каждый для нас особенный.
 				</span>
 			</p>
-			<img class="inf" src="pics/02.jpg">
+			<img class="inf" src="files/pictures/im/02.jpg">
 		</article>
 
 		<article id="fifth">
-			<figure id="element">
-				<img src="pics/scroll-1.jpg">
-				<img src="pics/scroll-2.jpg">
-				<img src="pics/scroll-3.jpg">
-				<img src="pics/scroll-4.jpg">
-				<img src="pics/scroll-5.jpg">
-				<img src="pics/scroll-6.jpg">													
-			</figure>
-		</article>
+		        <div id="viewport">
+		        	<ul id="slidewrapper">
+		        	</ul>
+		            <div id="prev-next-btns">
+		                <div id="prev-btn"></div>
+		                <div id="next-btn"></div>
+		            </div>
+		        </div>	
+		</article>												
 
 		<section>
-			<form></form>
 			<form id="products">
 				<div>
-					<img src="pics/cloths.png">
+					<img src="files/pictures/im/cloths.png">
 					<p>Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я</p>
-					<button><p>25000 руб.</p></button><br>
+					<div id="one"><p>25000 руб.</p></div><br>
 				</div>
 				<div>
-					<img src="pics/02.jpg">
+					<img src="files/pictures/im/floor.jpg">
 					<p>Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь</p>
-					<button><p>35000 руб.</p></button><br>
+					<div id="two"><p>35000 руб.</p></div><br>
 				</div>
 				<div>
-					<img src="pics/02.jpg">
+					<img src="files/pictures/im/floor_cloths.png">
 					<p>Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры</p>
-					<button><p>50000 руб.</p></button><br>
+					<div id="three"><p>50000 руб.</p></div><br>
 				</div>
 			</form>
 		</section>
 
-		<article id="sixth">
-			<img src="pics/02.jpg">
-			<p>
-				Задача организации, в особенности же социально-экономическое развитие является качественно новой ступенью модели развития. <wbr>Не&nbsp;следует, однако, забывать, что современная методология разработки требует анализа системы обучения кадров, соответствующей насущным потребностям.
-			</p>
+		<article id="massege">
+
 		</article>
 
 	</main>
@@ -87,4 +121,8 @@
 		</div>
 	</footer>
 </body>
+
+<script src="files/script/script.js"></script>
+<script type="php" src="files/script/json.php"></script>
+
 </html>
