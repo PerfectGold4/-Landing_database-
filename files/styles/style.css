@@ -56,17 +56,17 @@ header p {
   text-align: center;
 }
 .hid form div {
-  margin: 10% 25% 2% 25%;
+  margin: 10% 25% 2% 20%;
 }
 .hid form div p#e {
   font-size: 17px;
   font-weight: bold;
-  display: flex;
   float: left;
   margin-right: 3%;
 }
-.hid form button {
-  margin-left: 48%;
+.hid form div .butt {
+  margin-left: 10px;
+  width: 100px;
 }
 
 #first {
@@ -218,6 +218,13 @@ footer p a:visited {
   text-decoration: none;
 }
 
+@media (min-width: 1200px) {
+  form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media (max-width: 1200px) {
   #first p {
     color: white;

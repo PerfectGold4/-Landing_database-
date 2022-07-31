@@ -84,17 +84,18 @@ header { p{@include head(center, 3px, 20px)} }
 	}
 	form{
 		div{
-			margin: 10% 25% 2% 25%;
+			margin: 10% 25% 2% 20%;
+
 			p#e{
 				font-size: 17px;
 				font-weight: bold;
-				display: flex;
 				float: left;
 				margin-right: 3%;
 			}
-		}
-		button{
-			margin-left: 48%;
+			.butt{
+				margin-left: 10px;
+				width: 100px;
+			}
 		}
 	}
 }
@@ -183,6 +184,15 @@ footer{
 			padding: 3px 0px;
 			} }
 
+@media(min-width: 1200px) {
+	form{
+		div{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
 @media (max-width: 1200px) { 
 	#first { 
 		p{
