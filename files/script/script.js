@@ -13,9 +13,8 @@ $(function(){
 			}
 		})
 
-	$(document).ready(function(){
-		$('#hidden_2,#hidden_3,.fin_hid,#hidden_1').css({'visibility':'hidden'})
-	})
+	$('#hidden_2,#hidden_3,.fin_hid,#hidden_1').css({'visibility':'hidden'});
+
 	$('#one').click(function(){
 		$('#hidden_1').css({'visibility':'visible'})
 		$('main').css({'filter':'brightness(40%)'})
@@ -47,13 +46,12 @@ $(function(){
 		$('html, body').css({overflow: 'auto'})
 	});
 
-	$('.butt').click(function(){
-		$('.fin_hid').css({'visibility':'visible'});
-		$('#hidden_1,#hidden_2,#hidden_3').css({'visibility':'hidden'})});
 	$('#for_fh').click(function(){
 		$('.fin_hid').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
+
+
 })
 
