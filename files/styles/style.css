@@ -55,18 +55,24 @@ header p {
   border: dotted 2px black;
   text-align: center;
 }
-.hid form div {
-  margin: 10% 25% 2% 20%;
+.hid form div.mail {
+  margin: 10% 25% 0% 20%;
 }
-.hid form div p#e {
+.hid form div.mail p#e {
   font-size: 17px;
   font-weight: bold;
   float: left;
   margin-right: 3%;
 }
-.hid form div .butt {
+.hid form div.mail .butt {
   margin-left: 10px;
   width: 100px;
+}
+.hid form div.err {
+  margin-bottom: 2%;
+}
+.hid form div.err p.error {
+  color: red;
 }
 
 #first {
