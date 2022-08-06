@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title></title>
+	<title>Название</title>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="files/pictures/im/logo.png">
 	<link rel="stylesheet" type="text/css" href="files/styles/reset.css">
@@ -27,10 +27,13 @@
 				<img src="files/pictures/im/close.png" id="for_h_1">
 				<div><p id="t">Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я</p></div>
 				<form>
-					<div>
+					<div class="mail">
 						<p id="e">Введите ваш е-mail: </p>
 						<input type="" name="email" class="data_1" maxlength='25' placeholder='Введите ваш e-mail...'>
 						<input type="submit" name='submit' class="butt_1">
+					</div>
+					<div class="err">
+						<p class="error" id="1">Вы не указали ваш e-mail!</p>
 					</div>
 				</form>
 			</article>
@@ -44,20 +47,23 @@
 						<input type="" name="email" class="data_2" maxlength='25' placeholder='Введите ваш e-mail...'>
 						<input type="submit" name='submit' class="butt_2">
 					</div>
-					<div class="err">
-						<p class="error">Вы не указали ваш e-mail!</p>
-					</div>
 				</form>
+				<div class="err" id="2">
+						<p class="error" >Вы не указали ваш e-mail!</p>
+				</div>
 			</article>
 
 			<article class="hid" id="hidden_3">
 				<img src="files/pictures/im/close.png" id="for_h_3">
 				<div><p id="t">Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры</p></div>
 				<form>
-					<div>
+					<div class="mail">
 						<p id="e">Введите ваш е-mail: </p>
 						<input type="" name="email" class="data_3" maxlength='25' placeholder='Введите ваш e-mail...'>
 						<input type="submit" name='submit' class="butt_3">
+					</div>
+					<div class="err" id="3">
+						<p class="error" >Вы не указали ваш e-mail!</p>
 					</div>
 				</form>
 			</article>
@@ -128,44 +134,56 @@
 			$('input.butt_1').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_1').val();
-					$.ajax({
-						method: "POST",
-						url: "files/script/send.php",
-						data: {email: mail}
-							})
-								.done(function(){
-								});
-					$('#hidden_1').css({'visibility':'hidden'});
-					$('.fin_hid').css({'visibility':'visible'})
-					$('input.data_1').val('');
+					if (mail) {
+						$.ajax({
+							method: "POST",
+							url: "files/script/send.php",
+							data: {email: mail}
+								})
+									.done(function(){
+									});
+						$('#hidden_1').css({'visibility':'hidden'});
+						$('.fin_hid').css({'visibility':'visible'});
+						$('#1').css({'visibility':'hidden'});
+						$('input.data_1').val('');
+					}
+					else {$('#1').css({'visibility':'visible'});}
 				});
 			$('input.butt_2').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_2').val();
-					$.ajax({
-						method: "POST",
-						url: "files/script/send.php",
-						data: {email: mail}
-							})
-								.done(function(){
-								});
-					$('#hidden_2').css({'visibility':'hidden'});
-					$('.fin_hid').css({'visibility':'visible'})
-					$('input.data_2').val('');
+					if(mail) {
+						$.ajax({
+							method: "POST",
+							url: "files/script/send.php",
+							data: {email: mail}
+								})
+									.done(function(){
+									});
+						$('#hidden_2').css({'visibility':'hidden'});
+						$('.fin_hid').css({'visibility':'visible'});
+						$('#2').css({'visibility':'hidden'});
+						$('input.data_2').val('');
+					}
+					else {$('#2').css({'visibility':'visible'});}
 				});
 			$('input.butt_3').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_3').val();
-					$.ajax({
-						method: "POST",
-						url: "files/script/send.php",
-						data: {email: mail}
-							})
-								.done(function(){
-								});
-					$('#hidden_3').css({'visibility':'hidden'});
-					$('.fin_hid').css({'visibility':'visible'})
-					$('input.data_3').val('');
+					if(mail) {
+						$.ajax({
+							method: "POST",
+							url: "files/script/send.php",
+							data: {email: mail}
+								})
+									.done(function(){
+									});
+						$('#hidden_3').css({'visibility':'hidden'});
+						$('.fin_hid').css({'visibility':'visible'});
+						$('#3').css({'visibility':'hidden'});
+						$('input.data_3').val('');
+					}
+					else {$('#3').css({'visibility':'visible'});}
 				});
 		})
 </script>

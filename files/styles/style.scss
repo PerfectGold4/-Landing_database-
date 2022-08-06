@@ -37,6 +37,15 @@ $head-foot: rgba(0, 0, 0, 0.5);
 	background-repeat:no-repeat;}
 
 header { p{@include head(center, 3px, 20px)} }
+body {
+	user-select: none;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+  }
 .fin_hid{
 	z-index: 99999;
 	position: fixed;
@@ -84,7 +93,7 @@ header { p{@include head(center, 3px, 20px)} }
 	}
 	form{
 		div.mail{
-			margin: 10% 25% 0% 20%;
+			margin: 10% 25% 2% 20%;
 			p#e{
 				font-size: 17px;
 				font-weight: bold;
@@ -96,12 +105,15 @@ header { p{@include head(center, 3px, 20px)} }
 				width: 100px;
 			}
 		}
-		div.err{
-			margin-bottom: 2%;
-			p.error{
-				color: red;
-				}
-			}
+	}
+}
+
+.err{
+	z-index: 99999;
+	position: fixed;
+	padding-left: 11%;
+	p.error{
+		color: red;
 		}
 	}
 
@@ -169,8 +181,6 @@ section {
 				box-shadow: 3px 5px 5px #999;}
 		}
 	}}				
-				
-#massege {}
 
 footer{
 	background: $head-foot;
@@ -221,4 +231,4 @@ footer{
 			}
 		}
 	}
-} 
+}

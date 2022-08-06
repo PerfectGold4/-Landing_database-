@@ -1,9 +1,9 @@
 $(function(){
-
+/*при обновлении страница прокручивается вверх*/
 	window.onbeforeunload = function () {
 	  window.scrollTo(0, 0);
 	}
-
+/*декоративное появление блока*/
 	$('p', '#fourth').fadeOut();
 	$('img', '#fourth').fadeOut();
 	$(window).scroll(function(){
@@ -12,8 +12,8 @@ $(function(){
 				$('img', '#fourth').fadeIn(800);
 			}
 		})
-
-	$('#hidden_2,#hidden_3,.fin_hid,#hidden_1').css({'visibility':'hidden'});
+/*оформление отправки эл. почты*/
+	$('.hid,.fin_hid,.err').css({'visibility':'hidden'});
 
 	$('#one').click(function(){
 		$('#hidden_1').css({'visibility':'visible'})
@@ -32,16 +32,19 @@ $(function(){
 	});
 	$('#for_h_1').click(function(){
 		$('#hidden_1').css({'visibility':'hidden'})
+		$('#1').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
 	$('#for_h_2').click(function(){
 		$('#hidden_2').css({'visibility':'hidden'})
+		$('#2').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
 	$('#for_h_3').click(function(){
 		$('#hidden_3').css({'visibility':'hidden'})
+		$('#3').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
@@ -51,7 +54,6 @@ $(function(){
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
-
 
 })
 
