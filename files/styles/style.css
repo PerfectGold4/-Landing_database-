@@ -28,7 +28,7 @@ body {
   background: white;
   border-radius: 10px;
 }
-.fin_hid img {
+.fin_hid .back_fh {
   width: 5%;
   height: auto;
   margin-left: 92%;
@@ -37,7 +37,7 @@ body {
 .fin_hid div {
   margin: 0 15%;
 }
-.fin_hid div p#ft {
+.fin_hid div .fin_txt {
   font-size: 17px;
   text-align: center;
 }
@@ -51,7 +51,7 @@ body {
   background: white;
   border-radius: 10px;
 }
-.hid img {
+.hid .back_hid {
   width: 5%;
   height: auto;
   margin-left: 92%;
@@ -60,32 +60,32 @@ body {
 .hid div {
   margin: 0 15%;
 }
-.hid div p#t {
+.hid div .txt {
   display: flex;
   font-size: 17px;
   border: dotted 2px black;
   text-align: center;
 }
-.hid form div.mail {
+.hid form .mail {
   margin: 10% 25% 2% 20%;
 }
-.hid form div.mail p#e {
+.hid form .mail .em_txt {
   font-size: 17px;
   font-weight: bold;
   float: left;
   margin-right: 3%;
 }
-.hid form div.mail .butt {
+.hid form .mail .butt {
   margin-left: 10px;
   width: 100px;
 }
 
-.err {
+.error {
   z-index: 99999;
   position: fixed;
   padding-left: 11%;
 }
-.err p.error {
+.error .error_txt {
   color: red;
 }
 
@@ -164,15 +164,15 @@ body {
   max-height: 200px;
 }
 
-section {
+.pro {
   background: #7FFFD4;
   padding: 25px 10%;
 }
-section #products div {
+.pro #products div {
   display: flex;
   justify-content: space-evenly;
 }
-section #products div img {
+.pro #products div img {
   width: 30%;
   height: auto;
   margin: 25px 0px;
@@ -180,7 +180,7 @@ section #products div img {
   display: flex;
   align-items: center;
 }
-section #products div p {
+.pro #products div p {
   width: 20%;
   height: 150px;
   margin: auto 0px;
@@ -190,7 +190,7 @@ section #products div p {
   text-align: center;
   font-size: 18px;
 }
-section #products div div {
+.pro #products div div {
   width: 20%;
   height: 100px;
   margin: auto 0px;
@@ -203,7 +203,7 @@ section #products div div {
   border-radius: 2px;
   box-shadow: 3px 5px 5px #999;
 }
-section #products div div p {
+.pro #products div div p {
   width: auto;
   height: 50px;
   margin: auto auto;
@@ -213,10 +213,10 @@ section #products div div p {
   clear: left;
   font-size: 20px;
 }
-section #products div div:active {
+.pro #products div div:active {
   box-shadow: 0px 0px;
 }
-section #products div div:hover {
+.pro #products div div:hover {
   background: #00FF00;
 }
 
@@ -239,7 +239,7 @@ footer p a:visited {
 }
 
 @media (min-width: 1200px) {
-  form div {
+  form .mail {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,17 +260,17 @@ footer p a:visited {
   #fourth {
     display: none;
   }
-  section #products {
+  .pro #products {
     padding: 9px 1% !important;
   }
-  section #products div img {
+  .pro #products div img {
     display: none !important;
   }
-  section #products div p {
+  .pro #products div p {
     font-size: 15px;
     width: 45%;
   }
-  section #products div button {
+  .pro #products div button {
     width: 45%;
     margin-left: 5px;
   }

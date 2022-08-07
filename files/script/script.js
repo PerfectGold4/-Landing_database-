@@ -13,7 +13,7 @@ $(function(){
 			}
 		})
 /*оформление отправки эл. почты*/
-	$('.hid,.fin_hid,.err').css({'visibility':'hidden'});
+	$('.hid,.fin_hid,.error').css({'visibility':'hidden'});
 
 	$('#one').click(function(){
 		$('#hidden_1').css({'visibility':'visible'})
@@ -30,26 +30,26 @@ $(function(){
 		$('main').css({'filter':'brightness(40%)'})
 		$('html, body').css({overflow: 'hidden'})
 	});
-	$('#for_h_1').click(function(){
+	$('#back_1').click(function(){
 		$('#hidden_1').css({'visibility':'hidden'})
-		$('#1').css({'visibility':'hidden'})
+		$('#er_1').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
-	$('#for_h_2').click(function(){
+	$('#back_2').click(function(){
 		$('#hidden_2').css({'visibility':'hidden'})
-		$('#2').css({'visibility':'hidden'})
+		$('#er_2').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
-	$('#for_h_3').click(function(){
+	$('#back_3').click(function(){
 		$('#hidden_3').css({'visibility':'hidden'})
-		$('#3').css({'visibility':'hidden'})
+		$('#er_3').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})
 	});
 
-	$('#for_fh').click(function(){
+	$('.back_fh').click(function(){
 		$('.fin_hid').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
 		$('html, body').css({overflow: 'auto'})

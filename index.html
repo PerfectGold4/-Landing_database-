@@ -13,60 +13,87 @@
 <body>
 	
 	<header>
-		<p>Название</p>
+		<p>
+			Название
+		</p>
 	</header>
-		
 
-			<article class="fin_hid">
-				<img src="files/pictures/im/close.png" id="for_fh">
-				<div><p id="ft">Спасибо! Наш работник свяжется с вами.</p></div>
-			</article>
-
-
-			<article class="hid" id="hidden_1">
-				<img src="files/pictures/im/close.png" id="for_h_1">
-				<div><p id="t">Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я</p></div>
-				<form>
-					<div class="mail">
-						<p id="e">Введите ваш е-mail: </p>
-						<input type="" name="email" class="data_1" maxlength='25' placeholder='Введите ваш e-mail...'>
-						<input type="submit" name='submit' class="butt_1">
-					</div>
-					<div class="err">
-						<p class="error" id="1">Вы не указали ваш e-mail!</p>
-					</div>
-				</form>
-			</article>
-		
-			<article class="hid" id="hidden_2">
-				<img src="files/pictures/im/close.png" id="for_h_2">
-				<div><p id="t">Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь</p></div>
-				<form>
-					<div class="mail">
-						<p id="e">Введите ваш е-mail: </p>
-						<input type="" name="email" class="data_2" maxlength='25' placeholder='Введите ваш e-mail...'>
-						<input type="submit" name='submit' class="butt_2">
-					</div>
-				</form>
-				<div class="err" id="2">
-						<p class="error" >Вы не указали ваш e-mail!</p>
+	<section>
+		<div class="hid" id="hidden_1">
+			<img src="files/pictures/im/close.png" class="back_hid" id="back_1">
+			<div>
+				<p class="txt">
+					Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я
+				</p>
+			</div>
+			<form>
+				<div class="mail">
+					<p class="em_txt">
+						Введите ваш е-mail:
+					</p>
+					<input name="email" class="data_1" maxlength='25' placeholder='Введите ваш e-mail...'>
+					<input type="submit" name='submit' class="butt" id="butt_1">
 				</div>
-			</article>
-
-			<article class="hid" id="hidden_3">
-				<img src="files/pictures/im/close.png" id="for_h_3">
-				<div><p id="t">Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры</p></div>
-				<form>
-					<div class="mail">
-						<p id="e">Введите ваш е-mail: </p>
-						<input type="" name="email" class="data_3" maxlength='25' placeholder='Введите ваш e-mail...'>
-						<input type="submit" name='submit' class="butt_3">
-					</div>
-					<div class="err" id="3">
-						<p class="error" >Вы не указали ваш e-mail!</p>
-					</div>
-				</form>
-			</article>
+			</form>
+			<div class="error">
+				<p class="error_txt" id="er_1">
+					Вы не указали ваш e-mail!
+				</p>
+			</div>
+		</div>
+		<div class="hid" id="hidden_2">
+			<img src="files/pictures/im/close.png" class="back_hid" id="back_2">
+			<div>
+				<p class="txt">
+					Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь
+				</p>
+			</div>
+			<form>
+				<div class="mail">
+					<p class="em_txt">
+						Введите ваш е-mail:
+					</p>
+					<input name="email" class="data_2" maxlength='25' placeholder='Введите ваш e-mail...'>
+					<input type="submit" name='submit' class="butt" id="butt_2">
+				</div>
+			</form>
+			<div class="error">
+				<p class="error_txt" id="er_2">
+					Вы не указали ваш e-mail!
+				</p>
+			</div>
+		</div>
+		<div class="hid" id="hidden_3">
+			<img src="files/pictures/im/close.png" class="back_hid" id="back_3">
+			<div>
+				<p class="txt">
+					Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры
+				</p>
+			</div>
+			<form>
+				<div class="mail">
+					<p class="em_txt">
+						Введите ваш е-mail:
+					</p>
+					<input name="email" class="data_3" maxlength='25' placeholder='Введите ваш e-mail...'>
+					<input type="submit" name='submit' class="butt" id="butt_3">
+				</div>
+			</form>
+			<div class="error">
+				<p class="error_txt" id="er_3">
+					Вы не указали ваш e-mail!
+				</p>
+			</div>
+		</div>
+		<div class="fin_hid">
+			<img src="files/pictures/im/close.png" class="back_fh">
+			<div>
+				<p class="fin_txt">
+					Спасибо! Наш работник свяжется с вами.
+				</p>
+			</div>
+		</div>
+	</section>
 		
 	<main>
 		<article id="first">
@@ -93,7 +120,7 @@
 			<img class="inf" src="files/pictures/im/02.jpg">
 		</article>											
 
-		<section>
+		<section class="pro">
 			<form id="products">
 				<div>
 					<img src="files/pictures/im/cloths.png">
@@ -118,72 +145,78 @@
 		</article>
 
 	</main>
+
 	<footer>
 		<div>
 			<p>
-				<a href="tel:+7 800 555-35-35">Телефон: +7 800 555 35 35</a>
-				<a href="mailto:ilushavolkov@mail.ru">Эл. почта: mail@mail.ru</a> 
+				<a href="tel:+7 800 555-35-35">
+					Телефон: +7 800 555 35 35
+				</a>
+				<a href="mailto:ilushavolkov@mail.ru">
+					Эл. почта: mail@mail.ru
+				</a>
 			</p>
 		</div>
 	</footer>
+
 </body>
 
 <script src="files/script/script.js"></script>
 <script>
 	$(document).ready(function(){
-			$('input.butt_1').on('click', function(){
+			$('input#butt_1').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_1').val();
 					if (mail) {
 						$.ajax({
 							method: "POST",
-							url: "files/script/send.php",
-							data: {email: mail}
+							url: "files/script/send_1.php",
+							data: {email_1: mail}
 								})
 									.done(function(){
 									});
 						$('#hidden_1').css({'visibility':'hidden'});
 						$('.fin_hid').css({'visibility':'visible'});
-						$('#1').css({'visibility':'hidden'});
+						$('#er_1').css({'visibility':'hidden'});
 						$('input.data_1').val('');
 					}
-					else {$('#1').css({'visibility':'visible'});}
+					else {$('#er_1').css({'visibility':'visible'});}
 				});
-			$('input.butt_2').on('click', function(){
+			$('input#butt_2').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_2').val();
 					if(mail) {
 						$.ajax({
 							method: "POST",
-							url: "files/script/send.php",
-							data: {email: mail}
+							url: "files/script/send_2.php",
+							data: {email_2: mail}
 								})
 									.done(function(){
 									});
 						$('#hidden_2').css({'visibility':'hidden'});
 						$('.fin_hid').css({'visibility':'visible'});
-						$('#2').css({'visibility':'hidden'});
+						$('#er_2').css({'visibility':'hidden'});
 						$('input.data_2').val('');
 					}
-					else {$('#2').css({'visibility':'visible'});}
+					else {$('#er_2').css({'visibility':'visible'});}
 				});
-			$('input.butt_3').on('click', function(){
+			$('input#butt_3').on('click', function(){
 					event.preventDefault();
 					var mail = $('input.data_3').val();
 					if(mail) {
 						$.ajax({
 							method: "POST",
-							url: "files/script/send.php",
-							data: {email: mail}
+							url: "files/script/send_3.php",
+							data: {email_3: mail}
 								})
 									.done(function(){
 									});
 						$('#hidden_3').css({'visibility':'hidden'});
 						$('.fin_hid').css({'visibility':'visible'});
-						$('#3').css({'visibility':'hidden'});
+						$('#er_3').css({'visibility':'hidden'});
 						$('input.data_3').val('');
 					}
-					else {$('#3').css({'visibility':'visible'});}
+					else {$('#er_3').css({'visibility':'visible'});}
 				});
 		})
 </script>

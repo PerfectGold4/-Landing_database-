@@ -54,7 +54,7 @@ body {
 	margin: 15% 25%;
 	background: white;
 	border-radius: 10px;
-	img{
+	.back_fh{
 		width: 5%;
 		height: auto;
 		margin-left:92%;
@@ -62,7 +62,7 @@ body {
 	}
 	div{
 		margin: 0 15%;
-		p#ft{
+		.fin_txt{
 			font-size: 17px;
 			text-align: center;
 		}
@@ -76,7 +76,7 @@ body {
 	margin: 5% 15%;
 	background: white;
 	border-radius: 10px;
-	img{
+	.back_hid{
 		width: 5%;
 		height: auto;
 		margin-left:92%;
@@ -84,7 +84,7 @@ body {
 	}
 	div{
 		margin: 0 15%;
-		p#t{
+		.txt{
 			display: flex;
 			font-size: 17px;
 			border: dotted 2px black;
@@ -92,9 +92,9 @@ body {
 		}
 	}
 	form{
-		div.mail{
+		.mail{
 			margin: 10% 25% 2% 20%;
-			p#e{
+			.em_txt{
 				font-size: 17px;
 				font-weight: bold;
 				float: left;
@@ -108,11 +108,11 @@ body {
 	}
 }
 
-.err{
+.error{
 	z-index: 99999;
 	position: fixed;
 	padding-left: 11%;
-	p.error{
+	.error_txt{
 		color: red;
 		}
 	}
@@ -154,7 +154,7 @@ body {
 		padding: 10px 15%;
 		max-height: 200px;}}
 
-section {
+.pro {
 	background: #7FFFD4;
 	padding: 25px 10%;
 	#products {
@@ -201,7 +201,7 @@ footer{
 
 @media(min-width: 1200px) {
 	form{
-		div{
+		.mail{
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -215,7 +215,7 @@ footer{
 			span{
 				padding: 0px} } } 
 	#fourth{display: none}
-	section{
+	.pro{
 		#products{
 			padding: 9px 1% !important;
 			div{
