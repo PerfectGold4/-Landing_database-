@@ -1,11 +1,6 @@
-header p {
-  font-size: 20px;
-  height: 30px;
-  padding: 10px 0px 5px 0px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #F0F8FF;
-  text-align: center;
-  letter-spacing: 3px;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 body {
@@ -13,36 +8,16 @@ body {
   overflow: scroll;
   overflow-x: hidden;
 }
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.fin_hid {
-  z-index: 99999;
-  position: fixed;
-  width: 50%;
-  padding: 30px 0 70px 0;
-  margin: 15% 25%;
-  background: white;
-  border-radius: 10px;
-}
-.fin_hid .back_fh {
-  width: 5%;
-  height: auto;
-  margin-left: 92%;
-  margin-bottom: 5px;
-}
-.fin_hid div {
-  margin: 0 15%;
-}
-.fin_hid div .fin_txt {
-  font-size: 17px;
+body header p {
   text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+  height: 30px;
+  padding: 10px 0px 5px 0px;
+  color: #F0F8FF;
+  background: rgba(0, 0, 0, 0.5);
 }
-
-.hid {
+body section .hid {
   width: 70%;
   padding: 30px 0 70px 0;
   z-index: 99999;
@@ -51,128 +26,144 @@ body {
   background: white;
   border-radius: 10px;
 }
-.hid .back_hid {
+body section .hid .back_hid {
   width: 5%;
   height: auto;
   margin-left: 92%;
   margin-bottom: 5px;
 }
-.hid div {
+body section .hid div {
   margin: 0 15%;
 }
-.hid div .txt {
+body section .hid div .txt {
   display: flex;
   font-size: 17px;
   border: dotted 2px black;
   text-align: center;
 }
-.hid form .mail {
+body section .hid form .mail {
   margin: 10% 25% 2% 20%;
 }
-.hid form .mail .em_txt {
+body section .hid form .mail .em_txt {
   font-size: 17px;
   font-weight: bold;
   float: left;
   margin-right: 3%;
 }
-.hid form .mail .butt {
+body section .hid form .mail .butt {
   margin-left: 10px;
   width: 100px;
 }
-
-.error {
+body section .hid .error {
   z-index: 99999;
   position: fixed;
   padding-left: 11%;
 }
-.error .error_txt {
+body section .hid .error .error_txt {
   color: red;
 }
-
-#first {
+body section .fin_hid {
+  z-index: 99999;
+  position: fixed;
+  width: 50%;
+  padding: 30px 0 70px 0;
+  margin: 15% 25%;
+  background: white;
+  border-radius: 10px;
+}
+body section .fin_hid .back_fh {
+  width: 5%;
+  height: auto;
+  margin-left: 92%;
+  margin-bottom: 5px;
+}
+body section .fin_hid div {
+  margin: 0 15%;
+}
+body section .fin_hid div .fin_txt {
+  font-size: 17px;
+  text-align: center;
+}
+body main .pretty_back {
   background-image: url(../pictures/im/first-back.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
-#first p {
+body main .pretty_back p {
+  font-size: 60px;
+  padding: 100px 0px;
   color: white;
   text-align: center;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: 60px;
-  padding: 100px 0px;
 }
-#first p span {
+body main .pretty_back p span {
   background: rgba(0, 0, 0, 0.5);
   padding: 4px 1px;
 }
-
-#second {
+body main .lil_inf {
   background: #808080;
 }
-#second .one {
-  float: left;
-  width: 20%;
+body main .lil_inf #lil_1 {
   margin: 60px 5% 60px 15%;
-}
-#second .two {
   float: left;
   width: 20%;
-  margin: 60px 5% 60px 0px;
 }
-#second .three {
+body main .lil_inf #lil_2 {
+  margin: 60px 5% 60px 0px;
+  float: left;
+  width: 20%;
+}
+body main .lil_inf #lil_3 {
+  margin: 60px 15% 60px 0px;
   float: none;
   width: 20%;
-  margin: 60px 15% 60px 0px;
 }
-
-#third {
+body main .decor {
   background-image: url(../pictures/im/second-back.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
-#third img {
+body main .decor img {
   padding: 20px 5%;
   width: 90%;
 }
-
-#fourth {
+body main .anim_decor {
   background: white;
   padding-bottom: 30px;
   height: 200px;
 }
-#fourth p {
+body main .anim_decor p {
   float: left;
   width: 35%;
   margin-left: 15%;
   margin-top: 20px;
 }
-#fourth p .head-sect {
+body main .anim_decor p .head_dec {
   padding-left: 3%;
   font-size: 33px;
   font-weight: bold;
   text-transform: uppercase;
 }
-#fourth p .inf-sect {
+body main .anim_decor p .inf_dec {
   padding-left: 5%;
   font-size: 18px;
   font-weight: normal;
   text-transform: none;
 }
-#fourth .inf {
+body main .anim_decor .img_dec {
   padding: 10px 15%;
   max-height: 200px;
 }
-
-.pro {
+body main .products {
   background: #7FFFD4;
   padding: 25px 10%;
 }
-.pro #products div {
+body main .products .outer_pro div {
   display: flex;
   justify-content: space-evenly;
 }
-.pro #products div img {
+body main .products .outer_pro div img {
   width: 30%;
   height: auto;
   margin: 25px 0px;
@@ -180,7 +171,7 @@ body {
   display: flex;
   align-items: center;
 }
-.pro #products div p {
+body main .products .outer_pro div p {
   width: 20%;
   height: 150px;
   margin: auto 0px;
@@ -190,7 +181,7 @@ body {
   text-align: center;
   font-size: 18px;
 }
-.pro #products div div {
+body main .products .outer_pro div div {
   width: 20%;
   height: 100px;
   margin: auto 0px;
@@ -203,7 +194,7 @@ body {
   border-radius: 2px;
   box-shadow: 3px 5px 5px #999;
 }
-.pro #products div div p {
+body main .products .outer_pro div div p {
   width: auto;
   height: 50px;
   margin: auto auto;
@@ -213,27 +204,26 @@ body {
   clear: left;
   font-size: 20px;
 }
-.pro #products div div:active {
+body main .products .outer_pro div div:active {
   box-shadow: 0px 0px;
 }
-.pro #products div div:hover {
+body main .products .outer_pro div div:hover {
   background: #00FF00;
 }
-
-footer {
+body footer {
   background: rgba(0, 0, 0, 0.5);
 }
-footer p {
+body footer p {
   display: flex;
   justify-content: space-around;
   font-size: 21px;
   padding: 3px 0px;
 }
-footer p a:link {
+body footer p a:link {
   color: white;
   text-decoration: none;
 }
-footer p a:visited {
+body footer p a:visited {
   color: white;
   text-decoration: none;
 }
@@ -245,35 +235,33 @@ footer p a:visited {
     align-items: center;
   }
 }
-@media (max-width: 1200px) {
-  #first p {
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 25px;
-    padding: 60px 0px;
-  }
-  #first p span {
-    padding: 0px;
-  }
-  #fourth {
-    display: none;
-  }
-  .pro #products {
-    padding: 9px 1% !important;
-  }
-  .pro #products div img {
-    display: none !important;
-  }
-  .pro #products div p {
-    font-size: 15px;
-    width: 45%;
-  }
-  .pro #products div button {
-    width: 45%;
-    margin-left: 5px;
-  }
-}
+/*
+@media (max-width: 1200px) { 
+	.pretty_back {
+		p {
+			@include pretty_txt(25px, 60px 0px);
+			span {
+				padding: 0px
+			}
+		}
+	}
+	.anim_decor {display: none}
+	.products {
+		.outer_pro {
+			padding: 9px 1% !important;
+			div {
+				img {display: none !important}
+				p {
+					font-size: 15px;
+					width: 45%;
+				}
+				div {
+					width: 45%;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}*/
 
 /*# sourceMappingURL=style.css.map */

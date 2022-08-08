@@ -11,13 +11,11 @@
 </head>
 
 <body>
-	
 	<header>
 		<p>
 			Название
 		</p>
 	</header>
-
 	<section>
 		<div class="hid" id="hidden_1">
 			<img src="files/pictures/im/close.png" class="back_hid" id="back_1">
@@ -94,58 +92,69 @@
 			</div>
 		</div>
 	</section>
-		
 	<main>
-		<article id="first">
-			<p><span>"Мы принесём красоту в&nbsp;ваш&nbsp;мир!"</span></p>
-		</article>
-
-		<article id="second">
-				<img class="one" src="files/pictures/im/01.png">
-				<img class="two" src="files/pictures/im/02.png">
-				<img class="three" src="files/pictures/im/03.png">
-		</article>
-		
-		<article id="third">
-			<img src="files/pictures/im/letters-on.png">
-		</article>
-
-		<article id="fourth">
+		<div class="pretty_back">
 			<p>
-				<span class="head-sect">Только лучшие дизайны</span> <br>
-				<span class="inf-sect">
-				Работу над вашей проблемой будет вести группа наших лучших дизайнеров, из их вариантов будет выбираться стиль подходящий вам больше всего. В крайнем случае вы сможете сами выбрать себе стиль который понравится лично вам. Каждый наш сотрудник был проверен временем, и каждый наш клиент не был обделен вниманием - каждый для нас особенный.
+				<span>
+					"Мы принесём красоту в&nbsp;ваш&nbsp;мир!"
 				</span>
 			</p>
-			<img class="inf" src="files/pictures/im/02.jpg">
-		</article>											
-
-		<section class="pro">
-			<form id="products">
+		</div>
+		<div class="lil_inf">
+				<img id="lil_1" src="files/pictures/im/01.png">
+				<img id="lil_2" src="files/pictures/im/02.png">
+				<img id="lil_3" src="files/pictures/im/03.png">
+		</div>
+		<div class="decor">
+			<img src="files/pictures/im/letters-on.png">
+		</div>
+		<div class="anim_decor">
+			<p>
+				<span class="head_dec">
+					Только лучшие дизайны
+				</span>
+				<br>
+				<span class="inf_dec">
+					Работу над вашей проблемой будет вести группа наших лучших дизайнеров, из их вариантов будет выбираться стиль подходящий вам больше всего. В крайнем случае вы сможете сами выбрать себе стиль который понравится лично вам. Каждый наш сотрудник был проверен временем, и каждый наш клиент не был обделен вниманием - каждый для нас особенный.
+				</span>
+			</p>
+			<img class="img_dec" src="files/pictures/im/02.jpg">
+		</div>
+		<div class="products">
+			<div class="outer_pro">
 				<div>
 					<img src="files/pictures/im/cloths.png">
-					<p>Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я</p>
-					<div id="one"><p>25000 руб.</p></div><br>
+					<p>
+						Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я
+					</p>
+					<div id="prod_1">
+						<p>25000 руб.</p>
+					</div>
+					<br>
 				</div>
 				<div>
 					<img src="files/pictures/im/floor.jpg">
-					<p>Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь</p>
-					<div id="two"><p>35000 руб.</p></div><br>
+					<p>
+						Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь
+					</p>
+					<div id="prod_2">
+						<p>35000 руб.</p>
+					</div>
+					<br>
 				</div>
 				<div>
 					<img src="files/pictures/im/floor_cloths.png">
-					<p>Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры</p>
-					<div id="three"><p>50000 руб.</p></div><br>
+					<p>
+						Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры
+					</p>
+					<div id="prod_3">
+						<p>50000 руб.</p>
+					</div>
+					<br>
 				</div>
-			</form>
-		</section>
-
-		<article id="massege">
-
-		</article>
-
+			</div>
+		</div>
 	</main>
-
 	<footer>
 		<div>
 			<p>
@@ -158,15 +167,14 @@
 			</p>
 		</div>
 	</footer>
-
 </body>
 
 <script src="files/script/script.js"></script>
 <script>
 	$(document).ready(function(){
 			$('input#butt_1').on('click', function(){
-					event.preventDefault();
-					var mail = $('input.data_1').val();
+					event.preventDefault()
+					var mail = $('input.data_1').val()
 					if (mail) {
 						$.ajax({
 							method: "POST",
@@ -174,17 +182,17 @@
 							data: {email_1: mail}
 								})
 									.done(function(){
-									});
-						$('#hidden_1').css({'visibility':'hidden'});
-						$('.fin_hid').css({'visibility':'visible'});
-						$('#er_1').css({'visibility':'hidden'});
-						$('input.data_1').val('');
+									})
+						$('#hidden_1').css({'visibility':'hidden'})
+						$('.fin_hid').css({'visibility':'visible'})
+						$('#er_1').css({'visibility':'hidden'})
+						$('input.data_1').val('')
 					}
-					else {$('#er_1').css({'visibility':'visible'});}
-				});
+					else {$('#er_1').css({'visibility':'visible'})}
+				})
 			$('input#butt_2').on('click', function(){
-					event.preventDefault();
-					var mail = $('input.data_2').val();
+					event.preventDefault()
+					var mail = $('input.data_2').val()
 					if(mail) {
 						$.ajax({
 							method: "POST",
@@ -192,17 +200,17 @@
 							data: {email_2: mail}
 								})
 									.done(function(){
-									});
-						$('#hidden_2').css({'visibility':'hidden'});
-						$('.fin_hid').css({'visibility':'visible'});
-						$('#er_2').css({'visibility':'hidden'});
-						$('input.data_2').val('');
+									})
+						$('#hidden_2').css({'visibility':'hidden'})
+						$('.fin_hid').css({'visibility':'visible'})
+						$('#er_2').css({'visibility':'hidden'})
+						$('input.data_2').val('')
 					}
-					else {$('#er_2').css({'visibility':'visible'});}
-				});
+					else {$('#er_2').css({'visibility':'visible'})}
+				})
 			$('input#butt_3').on('click', function(){
-					event.preventDefault();
-					var mail = $('input.data_3').val();
+					event.preventDefault()
+					var mail = $('input.data_3').val()
 					if(mail) {
 						$.ajax({
 							method: "POST",
@@ -210,17 +218,15 @@
 							data: {email_3: mail}
 								})
 									.done(function(){
-									});
-						$('#hidden_3').css({'visibility':'hidden'});
-						$('.fin_hid').css({'visibility':'visible'});
-						$('#er_3').css({'visibility':'hidden'});
-						$('input.data_3').val('');
+									})
+						$('#hidden_3').css({'visibility':'hidden'})
+						$('.fin_hid').css({'visibility':'visible'})
+						$('#er_3').css({'visibility':'hidden'})
+						$('input.data_3').val('')
 					}
-					else {$('#er_3').css({'visibility':'visible'});}
+					else {$('#er_3').css({'visibility':'visible'})}
 				});
 		})
 </script>
-
-
 
 </html>
