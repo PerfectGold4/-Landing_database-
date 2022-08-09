@@ -210,6 +210,20 @@ body main .products .outer_pro div div:active {
 body main .products .outer_pro div div:hover {
   background: #00FF00;
 }
+body main .comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .comments .user_name {
+  width: 40%;
+  margin: 10px 0px 3px 0px;
+}
+body main .comments textarea {
+  width: 40%;
+  height: 10%;
+}
 body footer {
   background: rgba(0, 0, 0, 0.5);
 }
