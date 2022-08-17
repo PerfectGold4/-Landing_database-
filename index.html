@@ -155,9 +155,15 @@
 			</div>
 		</div>
 		<div class="comments">
-			<input type="" name="" class="user_name">
-			<textarea></textarea>
-			<input type="submit" name="">
+			<div class="inner_block">
+				<p>Комментарии</p>
+				<hr>
+				<input class="user_name" placeholder="Ваш ник...">
+				<div class="hid_name"></div>
+				<textarea class="text_comm" placeholder="Напишите комментарий..."></textarea>
+				<div class="hid_comm"></div>
+				<input type="submit" class="comm_butt">
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -177,32 +183,51 @@
 <script src="files/script/script.js"></script>
 <script>
 	$(document).ready(function(){
-			function send(submit, input_data, block, fin_block, er_block) {
-				$(submit).on('click', function(){
-					event.preventDefault()
-					var mail_1 = $('input.data_1').val()
-					var mail_2 = $('input.data_2').val()
-					var mail_3 = $('input.data_3').val()
-					if (mail_1 || mail_2 || mail_3) {
-						$.ajax({
-							method: "POST",
-							url: "files/script/send.php",
-							data: {email_1:mail_1, email_2:mail_2, email_3:mail_3}
+		function send_prod(submit, input_data, block, fin_block, er_block) {
+			$(submit).on('click', function(){
+				event.preventDefault()
+				var mail_1 = $('input.data_1').val()
+				var mail_2 = $('input.data_2').val()
+				var mail_3 = $('input.data_3').val()
+				if (mail_1 || mail_2 || mail_3) {
+					$.ajax({
+						method: "POST",
+						url: "files/script/send.php",
+						data: {email_1:mail_1, email_2:mail_2, email_3:mail_3}
+							})
+								.done(function(){
 								})
-									.done(function(){
-									})
-						$(block).css({'visibility':'hidden'})
-						$(fin_block).css({'visibility':'visible'})
-						$(er_block).css({'visibility':'hidden'})
-						$(input_data).val('')
-					}
-					else {$(er_block).css({'visibility':'visible'})}
-				})
+					$(block).css({'visibility':'hidden'})
+					$(fin_block).css({'visibility':'visible'})
+					$(er_block).css({'visibility':'hidden'})
+					$(input_data).val('')
+				}
+				else {$(er_block).css({'visibility':'visible'})}
+			})
+		}
+		send_prod('input#butt_1', 'input.data_1', '#hidden_1', '.fin_hid', '#er_1')
+		send_prod('input#butt_2', 'input.data_2', '#hidden_2', '.fin_hid', '#er_2')
+		send_prod('input#butt_3', 'input.data_3', '#hidden_3', '.fin_hid', '#er_3')
+		$('.comm_butt').on('click', function() {
+			var name = $('.user_name').val()
+			var content = $('.text_comm').val()
+			if (name) {
+				if (content) {
+					$.ajax({
+						method: 'POST',
+						url: "files/script/send.php",
+						data: {user:name, msg:content}
+						})
+							.done(function(){
+							})
+					$('.user_name').val('')
+					$('.text_comm').val('')
+				}
+				else {}
 			}
-		send('input#butt_1', 'input.data_1', '#hidden_1', '.fin_hid', '#er_1')
-		send('input#butt_2', 'input.data_2', '#hidden_2', '.fin_hid', '#er_2')
-		send('input#butt_3', 'input.data_3', '#hidden_3', '.fin_hid', '#er_3')
+			else {}
 		})
+	})
 </script>
 
 </html>

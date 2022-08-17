@@ -4,6 +4,7 @@
 }
 
 body {
+  background: #778899;
   user-select: none;
   overflow: scroll;
   overflow-x: hidden;
@@ -15,7 +16,7 @@ body header p {
   height: 30px;
   padding: 10px 0px 5px 0px;
   color: #F0F8FF;
-  background: rgba(0, 0, 0, 0.5);
+  background: #808080;
 }
 body section .hid {
   width: 70%;
@@ -211,21 +212,51 @@ body main .products .outer_pro div div:hover {
   background: #00FF00;
 }
 body main .comments {
+  padding: 0% 15%;
+}
+body main .comments .inner_block {
+  background: white;
+  padding: 2% 50% 2% 5%;
+  margin: 2% 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
-body main .comments .user_name {
-  width: 40%;
+body main .comments .inner_block p {
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+body main .comments .inner_block hr {
+  background: #778899;
+  height: 1px;
+}
+body main .comments .inner_block .user_name {
   margin: 10px 0px 3px 0px;
+  outline: none;
+  border: 2px solid #778899;
+  border-radius: 3px;
 }
-body main .comments textarea {
-  width: 40%;
-  height: 10%;
+body main .comments .inner_block .text_comm {
+  height: 100px;
+  resize: none;
+  outline: none;
+  border: 2px solid #778899;
+  border-radius: 3px;
+}
+body main .comments .inner_block .comm_butt {
+  margin-top: 3%;
+  padding: 2% 0;
+  width: 25%;
+  background: #87CEFA;
+  border: 2px solid #87CEFA;
+  border-radius: 3px;
+}
+body main .comments .inner_block .comm_butt:hover {
+  background: #00BFFF;
+  border: 2px solid #00BFFF;
 }
 body footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: #808080;
 }
 body footer p {
   display: flex;

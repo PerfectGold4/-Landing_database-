@@ -1,4 +1,5 @@
-$head-foot: rgba(0, 0, 0, 0.5);
+$head-foot: #808080;
+$for_comments: #778899;
 
 @mixin head($text-align, $letter-spacing, $font-size)  {
 	text-align: $text-align;
@@ -47,6 +48,7 @@ $head-foot: rgba(0, 0, 0, 0.5);
 	background: transparent;
 }
 body {
+	background: $for_comments;
 	user-select: none;
 	overflow: scroll;
 	overflow-x: hidden;
@@ -210,17 +212,47 @@ body {
 			}
 		}
 		.comments{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			.user_name {
-				width: 40%;
-				margin: 10px 0px 3px 0px;
-			}
-			textarea {
-				width: 40%;
-				height: 10%;
+			padding: 0% 15%;
+			.inner_block {
+				background: white;
+				padding: 2% 50% 2% 5%;
+				margin: 2% 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				p {
+					margin-bottom: 1%;
+					font-weight: bold;
+				}
+				hr {
+					background: $for_comments;
+					height: 1px;
+				}
+				.user_name {
+					margin: 10px 0px 3px 0px;
+					outline:none;
+					border: 2px solid $for_comments;
+					border-radius: 3px;
+				}
+				.text_comm {
+					height: 100px;
+					resize: none;
+					outline:none;
+					border: 2px solid $for_comments;
+					border-radius: 3px;
+				}
+				.comm_butt {
+					&:hover {
+						background: #00BFFF;
+						border: 2px solid #00BFFF;
+					}
+					margin-top: 3%;
+					padding: 2% 0;
+					width: 25%;
+					background: #87CEFA;
+					border: 2px solid #87CEFA;
+					border-radius: 3px;
+				}
 			}
 		}
 	}
