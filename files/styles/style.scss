@@ -1,19 +1,18 @@
 $head-foot: #808080;
 $for_comments: #778899;
-
+@mixin back_img($back-img) {
+	background-image: $back-img;
+	background-size: 100% auto;
+	background-repeat:no-repeat;
+}
 @mixin head($text-align, $letter-spacing, $font-size)  {
 	text-align: $text-align;
 	letter-spacing: $letter-spacing;
 	font-size: $font-size;
 	height: 30px;
-	padding: 10px 0px 5px 0px;
+	padding: 10px 0px 35px 0px;
 	color: #F0F8FF;
 	background: $head-foot;
-}
-@mixin back_img($back-img) {
-	background-image: $back-img;
-	background-size: 100% auto;
-	background-repeat:no-repeat;
 }
 @mixin pretty_txt($font-size, $padding) {
 	font-size: $font-size;
@@ -42,6 +41,11 @@ $for_comments: #778899;
 	display: flex;
 	align-items: center;
 }
+@mixin hid_in_comments ($margin) {
+	margin: $margin;
+	@include back_img(url(../pictures/im/key.png));
+	position: relative;
+}
 
 ::-webkit-scrollbar {
 	width: 0px;
@@ -52,6 +56,7 @@ body {
 	user-select: none;
 	overflow: scroll;
 	overflow-x: hidden;
+	position: relative;
 	header {
 		p {
 			@include head(center, 3px, 20px)
@@ -168,10 +173,10 @@ body {
 				margin-left: 15%;
 				margin-top: 20px;
 				.head_dec {
-					@include anim_block(3%, 33px, bold, uppercase)
+					@include anim_block(3%, 28px, bold, uppercase)
 				}
 				.inf_dec {
-					@include anim_block(5%, 18px)
+					@include anim_block(5%, 17px)
 				}
 			}
 			.img_dec {
@@ -211,22 +216,28 @@ body {
 				}
 			}
 		}
-		.comments{
+		.comments {
 			padding: 0% 15%;
 			.inner_block {
 				background: white;
 				padding: 2% 50% 2% 5%;
-				margin: 2% 0;
+				margin: 3% 0;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				p {
+				.just_text {
 					margin-bottom: 1%;
-					font-weight: bold;
+					font-weight: 500;
+					font-size: 14px;
 				}
 				hr {
 					background: $for_comments;
 					height: 1px;
+				}
+				.no_comment {
+					p {
+						color: $for_comments;
+					}
 				}
 				.user_name {
 					margin: 10px 0px 3px 0px;
@@ -253,6 +264,31 @@ body {
 					border: 2px solid #87CEFA;
 					border-radius: 3px;
 				}
+				.hid_comm {
+
+				}
+			}
+		}
+		.the_comment {
+			padding-top: 2%;
+			.name {
+				display: flex;
+				float: left;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.date {
+				font-size: 11px;
+				text-indent: 10px;
+				padding-top: 5px;
+				font-weight: normal;
+				text-decoration: underline;
+				color: $for_comments;
+				margin-bottom: 1%;
+			}
+			.comment {
+				font-size: 100%;
+				font-weight: normal;
 			}
 		}
 	}

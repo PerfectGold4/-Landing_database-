@@ -8,13 +8,14 @@ body {
   user-select: none;
   overflow: scroll;
   overflow-x: hidden;
+  position: relative;
 }
 body header p {
   text-align: center;
   letter-spacing: 3px;
   font-size: 20px;
   height: 30px;
-  padding: 10px 0px 5px 0px;
+  padding: 10px 0px 35px 0px;
   color: #F0F8FF;
   background: #808080;
 }
@@ -142,13 +143,13 @@ body main .anim_decor p {
 }
 body main .anim_decor p .head_dec {
   padding-left: 3%;
-  font-size: 33px;
+  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
 }
 body main .anim_decor p .inf_dec {
   padding-left: 5%;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
   text-transform: none;
 }
@@ -217,18 +218,22 @@ body main .comments {
 body main .comments .inner_block {
   background: white;
   padding: 2% 50% 2% 5%;
-  margin: 2% 0;
+  margin: 3% 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body main .comments .inner_block p {
+body main .comments .inner_block .just_text {
   margin-bottom: 1%;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 14px;
 }
 body main .comments .inner_block hr {
   background: #778899;
   height: 1px;
+}
+body main .comments .inner_block .no_comment p {
+  color: #778899;
 }
 body main .comments .inner_block .user_name {
   margin: 10px 0px 3px 0px;
@@ -254,6 +259,28 @@ body main .comments .inner_block .comm_butt {
 body main .comments .inner_block .comm_butt:hover {
   background: #00BFFF;
   border: 2px solid #00BFFF;
+}
+body main .the_comment {
+  padding-top: 2%;
+}
+body main .the_comment .name {
+  display: flex;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+body main .the_comment .date {
+  font-size: 11px;
+  text-indent: 10px;
+  padding-top: 5px;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #778899;
+  margin-bottom: 1%;
+}
+body main .the_comment .comment {
+  font-size: 100%;
+  font-weight: normal;
 }
 body footer {
   background: #808080;

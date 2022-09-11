@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Название</title>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="files/pictures/im/logo.png">
-	<link rel="stylesheet" type="text/css" href="files/styles/reset.css">
+	<link href="files/styles/not_mine/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="files/styles/not_mine/reset.css">
 	<link rel="stylesheet" type="text/css" href="files/styles/style.css">
-	<script ENGINE="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
 </head>
-
 <body>
 	<header>
 		<p>
@@ -156,12 +154,24 @@
 		</div>
 		<div class="comments">
 			<div class="inner_block">
-				<p>Комментарии</p>
-				<hr>
-				<input class="user_name" placeholder="Ваш ник...">
-				<div class="hid_name"></div>
-				<textarea class="text_comm" placeholder="Напишите комментарий..."></textarea>
-				<div class="hid_comm"></div>
+				<p class="just_text">Комментарии</p>
+				<div class="no_comment">
+				</div>
+				<?php
+					$pdo = new PDO("mysql:host=localhost;dbname=landing", "root", "root");
+					$sql = 'SELECT * FROM comments';
+					$statement = $pdo->query($sql);
+					$comments = $statement->fetchAll(PDO::FETCH_ASSOC);
+					foreach ($comments as $comment):?>
+						<div class="the_comment">
+							<hr>
+							<h2 class="name"><?= $comment['name'];?></h2>
+							<p class="date"><?= $comment['date_time'];?></p>
+							<p class="comment"><?= $comment['content'];?></p>
+						</div>
+					<?php endforeach;?>
+				<input class="user_name" data-toggle="tooltip" placeholder="Ваш ник...">
+				<textarea class="text_comm" data-toggle="tooltip" placeholder="Напишите комментарий..."></textarea>
 				<input type="submit" class="comm_butt">
 			</div>
 		</div>
@@ -178,8 +188,10 @@
 			</p>
 		</div>
 	</footer>
+	<script src="files/script/not_mine/jquery-3.6.1.min.js"></script>
+	<script src="files/script/not_mine/popper.min.js"></script>
+	<script src="files/script/not_mine/bootstrap.min.js"></script>
 </body>
-
 <script src="files/script/script.js"></script>
 <script>
 	$(document).ready(function(){
@@ -208,7 +220,7 @@
 		send_prod('input#butt_1', 'input.data_1', '#hidden_1', '.fin_hid', '#er_1')
 		send_prod('input#butt_2', 'input.data_2', '#hidden_2', '.fin_hid', '#er_2')
 		send_prod('input#butt_3', 'input.data_3', '#hidden_3', '.fin_hid', '#er_3')
-		$('.comm_butt').on('click', function() {
+		function send_comm() {
 			var name = $('.user_name').val()
 			var content = $('.text_comm').val()
 			if (name) {
@@ -222,12 +234,30 @@
 							})
 					$('.user_name').val('')
 					$('.text_comm').val('')
+					setTimeout(function(){
+					    window.location.reload()
+					},100)
 				}
-				else {}
+				else {
+					tooltip ('.text_comm')
+				}
 			}
-			else {}
-		})
+			else {
+				tooltip ('.user_name')
+				}
+			}
+		function tooltip(clas) {
+			$(clas).tooltip('show')
+			setTimeout(function(){
+			    $(clas).tooltip('hide')
+			},2000)
+		}
+		$('.comm_butt').click(send_comm)
+		$('[data-toggle="tooltip"]').tooltip({
+			title: "Введите текст...",
+			placement: 'bottom',
+			trigger: 'manual'
+		});
 	})
 </script>
-
 </html>
