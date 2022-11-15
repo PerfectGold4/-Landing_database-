@@ -175,6 +175,22 @@
 				<input type="submit" class="comm_butt">
 			</div>
 		</div>
+		<div class="gallary">
+			<div id="viewport">
+	            <ul id="slidewrapper">
+	                <?php
+	                	$dir = 'files/pictures/gallary';
+	                	$files = array_diff(scandir($dir), array('..', '.'));
+						foreach ($files as $file):?>
+	                		<li class="slide"><img src="files/pictures/gallary/<?= $file;?>" alt="1" class="slide-img"></li>
+					<?php endforeach;?>
+	            </ul>
+		        <div id="prev-next-btns">
+	                <div id="prev-btn"></div>
+	                <div id="next-btn"></div>
+	            </div>
+	        </div>
+		</div>
 	</main>
 	<footer>
 		<div>
