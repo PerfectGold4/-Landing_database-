@@ -3,6 +3,7 @@
 <head>
 	<title>Название</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="files/pictures/im/logo.png">
 	<link href="files/styles/not_mine/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="files/styles/not_mine/reset.css">
@@ -17,7 +18,7 @@
 	<section>
 		<div class="hid" id="hidden_1">
 			<img src="files/pictures/im/close.png" class="back_hid" id="back_1">
-			<div>
+			<div class="div_txt">
 				<p class="txt">
 					Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я
 				</p>
@@ -39,7 +40,7 @@
 		</div>
 		<div class="hid" id="hidden_2">
 			<img src="files/pictures/im/close.png" class="back_hid" id="back_2">
-			<div>
+			<div class="div_txt">
 				<p class="txt">
 					Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь
 				</p>
@@ -61,7 +62,7 @@
 		</div>
 		<div class="hid" id="hidden_3">
 			<img src="files/pictures/im/close.png" class="back_hid" id="back_3">
-			<div>
+			<div class="div_txt">
 				<p class="txt">
 					Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры
 				</p>
@@ -83,7 +84,7 @@
 		</div>
 		<div class="fin_hid">
 			<img src="files/pictures/im/close.png" class="back_fh">
-			<div>
+			<div class="fin_div">
 				<p class="fin_txt">
 					Спасибо! Наш работник свяжется с вами.
 				</p>
