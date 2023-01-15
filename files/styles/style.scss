@@ -1,6 +1,7 @@
 $head-foot: #808080;
 $for_comments: #778899;
-
+.disabledbutton {
+    pointer-events: none;}
 /*mixins*/
 	@mixin back_img($back-img) {
 		background-image: $back-img;
@@ -48,346 +49,338 @@ $for_comments: #778899;
 		@include back_img(url(../pictures/im/key.png));
 		position: relative;
 	}
-
-@media (min-width: 1200px) {
-	::-webkit-scrollbar {
+	@mixin butt_for_comm ($back_hov, $back) {
+		&:hover {
+			background: $back_hov;
+			border: 2px solid $back_hov;
+			}
+		width: fit-content;
+		padding: 2% 5px;
+		background: $back;
+		border: 2px solid $back;
+		border-radius: 3px;
+	}
+::-webkit-scrollbar {
 		width: 0px;
 		background: transparent;
 	}
-	body {
-		background: $for_comments;
-		user-select: none;
-		overflow: scroll;
-		overflow-x: hidden;
-		position: relative;
-		header {
+body {
+	background: $for_comments;
+	user-select: none;
+	overflow: scroll;
+	overflow-x: hidden;
+	position: relative;
+	header {
+		p {
+			@include head(center, 3px, 20px)
+		}
+	}
+	section {
+		.hid {
+			width: 70%;
+			padding: 30px 0 70px 0;
+			z-index: 99999;
+			position: fixed;
+			margin: 5% 15%;
+			background: white;
+			border-radius: 10px;
+			.back_hid {
+				width: 5%;
+				height: auto;
+				margin-left:92%;
+				margin-bottom: 5px;
+			}
+			div {
+				margin: 0 15%;
+				.txt {
+					display: flex;
+					font-size: 17px;
+					border: dotted 2px black;
+					text-align: center;
+				}
+			}
+			form {
+				.mail {
+					margin: 10% 25% 2% 20%;
+					.em_txt {
+						font-size: 17px;
+						font-weight: bold;
+						float: left;
+						margin-right: 3%;
+					}
+					.butt {
+						margin-left: 10px;
+						width: 100px;
+					}
+				}
+			}
+			.error {
+				z-index: 99999;
+				position: fixed;
+				padding-left: 11%;
+				.error_txt {
+					color: red;
+					}
+				}
+			}
+		.fin_hid {
+			z-index: 99999;
+			position: fixed;
+			width: 50%;
+			padding: 30px 0 70px 0;
+			margin: 15% 25%;
+			background: white;
+			border-radius: 10px;
+			.back_fh {
+				width: 5%;
+				height: auto;
+				margin-left:92%;
+				margin-bottom: 5px;
+			}
+			div {
+				margin: 0 15%;
+				.fin_txt {
+					font-size: 17px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	main {
+		.pretty_back {
+			@include back_img(url(../pictures/im/first-back.jpg));
 			p {
-				@include head(center, 3px, 20px)
-			}
-		}
-		section {
-			.hid {
-				width: 70%;
-				padding: 30px 0 70px 0;
-				z-index: 99999;
-				position: fixed;
-				margin: 5% 15%;
-				background: white;
-				border-radius: 10px;
-				.back_hid {
-					width: 5%;
-					height: auto;
-					margin-left:92%;
-					margin-bottom: 5px;
-				}
-				div {
-					margin: 0 15%;
-					.txt {
-						display: flex;
-						font-size: 17px;
-						border: dotted 2px black;
-						text-align: center;
-					}
-				}
-				form {
-					.mail {
-						margin: 10% 25% 2% 20%;
-						.em_txt {
-							font-size: 17px;
-							font-weight: bold;
-							float: left;
-							margin-right: 3%;
-						}
-						.butt {
-							margin-left: 10px;
-							width: 100px;
-						}
-					}
-				}
-				.error {
-					z-index: 99999;
-					position: fixed;
-					padding-left: 11%;
-					.error_txt {
-						color: red;
-						}
-					}
-				}
-			.fin_hid {
-				z-index: 99999;
-				position: fixed;
-				width: 50%;
-				padding: 30px 0 70px 0;
-				margin: 15% 25%;
-				background: white;
-				border-radius: 10px;
-				.back_fh {
-					width: 5%;
-					height: auto;
-					margin-left:92%;
-					margin-bottom: 5px;
-				}
-				div {
-					margin: 0 15%;
-					.fin_txt {
-						font-size: 17px;
-						text-align: center;
-					}
-				}
-			}
-		}
-		main {
-			.pretty_back {
-				@include back_img(url(../pictures/im/first-back.jpg));
-				p {
-					@include pretty_txt(60px, 100px 0px);
+				@include pretty_txt(60px, 100px 0px);
 				   	span{
-					   	background: rgba(0, 0, 0, 0.5);
-					   	padding: 4px 1px;
+				   	background: rgba(0, 0, 0, 0.5);
+					padding: 4px 1px;
+				}
+			}
+		}
+		.lil_inf {
+			background: #808080;
+			#lil_1 {
+				@include for_img_dec (60px 5% 60px 15%)
+			}
+			#lil_2 {
+				@include for_img_dec (60px 5% 60px 0px)
+			}
+			#lil_3 {
+				@include for_img_dec (60px 15% 60px 0px, none)
+			}
+		}
+		.decor {
+			img {
+				padding: 20px 5%;
+				width: 90%;
+			}
+			@include back_img(url(../pictures/im/second-back.jpg));
+		}
+		.anim_decor {
+			background: white;
+			padding-bottom: 30px;
+			height: 250px;
+		    display: flex;
+			justify-content: center;
+		    align-items: center;
+			p {
+				float: left;
+				width: 35%;
+				margin-left: 15%;
+				margin-top: 20px;
+				.head_dec {
+					@include anim_block(3%, 28px, bold, uppercase)
+				}
+				.inf_dec {
+					@include anim_block(5%, 17px)
+				}
+			}
+			.img_dec {
+				padding: 10px 15%;
+				max-height: 200px;
+			}
+		}
+		.products {
+			background: #7FFFD4;
+			padding: 25px 10%;
+			.outer_pro {
+				div {
+					display: flex;
+			 	 	justify-content: space-evenly;
+					img {
+						@include prod (30%, auto, 25px 0px)
 					}
-				}
-			}
-			.lil_inf {
-				background: #808080;
-				#lil_1 {
-					@include for_img_dec (60px 5% 60px 15%)
-				}
-				#lil_2 {
-					@include for_img_dec (60px 5% 60px 0px)
-				}
-				#lil_3 {
-					@include for_img_dec (60px 15% 60px 0px, none)
-				}
-			}
-			.decor {
-				img {
-					padding: 20px 5%;
-					width: 90%;
-				}
-				@include back_img(url(../pictures/im/second-back.jpg));
-			}
-			.anim_decor {
-				background: white;
-				padding-bottom: 30px;
-				height: 250px;
-			    display: flex;
-			    justify-content: center;
-			    align-items: center;
-				p {
-					float: left;
-					width: 35%;
-					margin-left: 15%;
-					margin-top: 20px;
-					.head_dec {
-						@include anim_block(3%, 28px, bold, uppercase)
-					}
-					.inf_dec {
-						@include anim_block(5%, 17px)
-					}
-				}
-				.img_dec {
-					padding: 10px 15%;
-					max-height: 200px;
-				}
-			}
-			.products {
-				background: #7FFFD4;
-				padding: 25px 10%;
-				.outer_pro {
+					p {
+						@include prod (20%, 150px, auto 0px);
+						text-align: center;
+						font-size: 18px;}
 					div {
-						display: flex;
-			 	 		justify-content: space-evenly;
-						img {
-							@include prod (30%, auto, 25px 0px)
-						}
 						p {
-							@include prod (20%, 150px, auto 0px);
-							text-align: center;
-							font-size: 18px;}
-						div {
-							p {
-								@include prod (auto, 50px, auto auto);
-								clear: left;
-								font-size: 20px;
-							}
-							&:active {box-shadow: 0px 0px}
-							&:hover {background: #00FF00}
-							@include prod (20%, 100px, auto 0px);
+							@include prod (auto, 50px, auto auto);
 							clear: left;
-							background: #32CD32;
-							border: 1px solid #32CD32;
-							border-radius: 2px;
-							box-shadow: 3px 5px 5px #999;
+							font-size: 20px;
 						}
+						&:active {box-shadow: 0px 0px}
+						&:hover {background: #00FF00}
+						@include prod (20%, 100px, auto 0px);
+						clear: left;
+						background: #32CD32;
+						border: 1px solid #32CD32;
+						border-radius: 2px;
+						box-shadow: 3px 5px 5px #999;
 					}
 				}
 			}
-			.comments {
-				padding: 0% 15%;
-				.inner_block {
-					background: white;
-					padding: 2% 50% 2% 5%;
-					margin: 3% 0;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					.just_text {
-						margin-bottom: 1%;
-						font-weight: 500;
-						font-size: 14px;
-					}
-					hr {
-						background: $for_comments;
-						height: 1px;
-					}
-					.no_comment {
-						p {
-							color: $for_comments;
-						}
-					}
-					.user_name {
-						margin: 10px 0px 3px 0px;
-						outline:none;
-						border: 2px solid $for_comments;
-						border-radius: 3px;
-					}
-					.text_comm {
-						height: 100px;
-						resize: none;
-						outline:none;
-						border: 2px solid $for_comments;
-						border-radius: 3px;
-					}
-					.comm_butt {
-						&:hover {
-							background: #00BFFF;
-							border: 2px solid #00BFFF;
-						}
-						margin-top: 3%;
-						padding: 2% 0;
-						width: 25%;
-						background: #87CEFA;
-						border: 2px solid #87CEFA;
-						border-radius: 3px;
-					}
-					.hid_comm {
-
-					}
-				}
-			}
-			.the_comment {
-				padding-top: 2%;
-				.name {
-					display: flex;
-					float: left;
-					font-size: 14px;
-					font-weight: bold;
-				}
-				.date {
-					font-size: 11px;
-					text-indent: 10px;
-					padding-top: 5px;
-					font-weight: normal;
-					text-decoration: underline;
-					color: $for_comments;
+		}
+		.comments {
+			padding: 0% 15%;
+			.inner_block {
+				background: white;
+				padding: 2% 50% 2% 5%;
+				margin: 3% 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.just_text {
 					margin-bottom: 1%;
+					font-weight: 500;
+					font-size: 14px;
 				}
+				hr {
+					background: $for_comments;
+					height: 1px;
+				}
+				.no_comment {
+					p {
+						color: $for_comments;
+					}
+				}
+				.user_name {
+					margin: 10px 0px 3px 0px;
+					outline:none;
+					border: 2px solid $for_comments;
+					border-radius: 3px;
+				}
+				.text_comm {
+					height: 100px;
+					resize: none;
+					outline:none;
+					border: 2px solid $for_comments;
+					border-radius: 3px;
+				}
+				.comm_butt {
+					@include butt_for_comm(#00BFFF, #87CEFA);
+					margin-top: 3%;
+				}
+				.open_comments, .close_comments {
+					@include butt_for_comm (#808080, #696969)
+				}
+
+			}
+		}
+		.the_comment {
+			padding: 2% 0;
+			.name {
+				display: flex;
+				float: left;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.date {
+				font-size: 11px;
+				text-indent: 10px;
+				padding-top: 5px;
+				font-weight: normal;
+				text-decoration: underline;
+				color: $for_comments;
+				margin-bottom: 1%;
+				color:#778899;
+				text-decoration:underline
+			}
+			.outer_comment {
+				word-wrap: break-word;
 				.comment {
 					font-size: 100%;
 					font-weight: normal;
 				}
 			}
-			.gallary {
-			    width: 800px;
-			    margin: 50px auto;
-				#viewport {
-				    width: 100%;
-				    display: table;
+		}
+		.gallary {
+		    width: 800px;
+		    margin: 50px auto;
+			#viewport {
+			    width: 100%;
+			    display: table;
+			    position: relative;
+			    overflow: hidden;
+			    user-select: none;
+				#slidewrapper {
 				    position: relative;
-				    overflow: hidden;
-				    user-select: none;
-					#slidewrapper {
-					    position: relative;
-					    width: calc(100% * 4);
-					    top: 0;
-					    left: 0;
+				    width: calc(100% * 4);
+				    top: 0;
+				    left: 0;
+				    margin: 0;
+				    padding: 0;
+				    transition: 1s;
+				    transition-timing-function: ease-in-out;
+				    align-items: center;
+    				display: flex;
+					ul, li {
 					    margin: 0;
 					    padding: 0;
-					    transition: 1s;
-					    transition-timing-function: ease-in-out;
-						ul, li {
-						    margin: 0;
-						    padding: 0;
-						}
-						li {
-						    width: calc(100%/4);
-						    list-style: none;
-						    display: inline;
-						    float: left;
-							.slide-img {
-							    width: 100%;
-							    height: 400px;
-							}
+					}
+					li {
+					    width: calc(100%/4);
+					    list-style: none;
+					    display: inline;
+					    float: left;
+						.slide-img {
+						    width: 100%;
 						}
 					}
-					#prev-btn, #next-btn {
-					    position: absolute;
-					    width: 50px;
-					    height: 50px;
-					    background-color: #fff;
-					    border-radius: 50%;
-					    top: calc(50% - 25px);
-					}
-					#prev-btn:hover, #next-btn:hover {
-					    cursor: pointer;
-					}
-					#prev-btn {
-					    left: 20px;
-					}
-					#next-btn {
-					    right: 20px;
-					}
+				}
+				#prev-btn, #next-btn {
+				    position: absolute;
+				    width: 50px;
+				    height: 50px;
+				    background-color: #fff;
+				    border-radius: 50%;
+				    top: calc(50% - 25px);
+				}
+				#prev-btn:hover, #next-btn:hover {
+				    cursor: pointer;
+				}
+				#prev-btn {
+				    left: 20px;
+				}
+				#next-btn {
+				    right: 20px;
 				}
 			}
 		}
-		footer {
-			background: $head-foot;
-			p {
-				a {
-					&:link {
-						color:white;
-						text-decoration:none
-					}
-					&:visited {
-						color:white;
-						text-decoration:none
-					}
+	}
+	footer {
+		background: $head-foot;
+		p {
+			a {
+				&:link {
+					color:white;
+					text-decoration:none
 				}
-				display: flex;
-				justify-content: space-around;
-				font-size: 21px;
-				padding: 3px 0px;
+				&:visited {
+					color:white;
+					text-decoration:none
+				}
 			}
+			display: flex;
+			justify-content: space-around;
+			font-size: 21px;
+			padding: 3px 0px;
 		}
 	}
 }
-
-@media (max-width: 1200px) {
-	::-webkit-scrollbar {
-		width: 0px;
-		background: transparent;
-	}
+@media (max-width: 1250px) {
 	body {
-		background: $for_comments;
-		user-select: none;
-		overflow: scroll;
-		overflow-x: hidden;
-		position: relative;
-		header {
-			p {
-				@include head(center, 3px, 20px)
-			}
-		}
 		section {
 			.hid {
 				width: 90%;
@@ -435,7 +428,6 @@ $for_comments: #778899;
 					width: 90%;
 					.error_txt {
 						color: red;
-						text-align: center;
 						}
 					}
 				}
@@ -473,25 +465,6 @@ $for_comments: #778899;
 					   	line-height: 1.5;
 					}
 				}
-			}
-			.lil_inf {
-				background: #808080;
-				#lil_1 {
-					@include for_img_dec (60px 5% 60px 15%)
-				}
-				#lil_2 {
-					@include for_img_dec (60px 5% 60px 0px)
-				}
-				#lil_3 {
-					@include for_img_dec (60px 15% 60px 0px, none)
-				}
-			}
-			.decor {
-				img {
-					padding: 20px 5%;
-					width: 90%;
-				}
-				@include back_img(url(../pictures/im/second-back.jpg));
 			}
 			.anim_decor {
 				display: none
@@ -586,29 +559,8 @@ $for_comments: #778899;
 					}
 				}
 			}
-			.the_comment {
-				padding-top: 2%;
-				.name {
-					display: flex;
-					float: left;
-					font-size: 14px;
-					font-weight: bold;
-				}
-				.date {
-					font-size: 11px;
-					text-indent: 10px;
-					padding-top: 5px;
-					font-weight: normal;
-					text-decoration: underline;
-					color: $for_comments;
-					margin-bottom: 1%;
-				}
-				.comment {
-					font-size: 100%;
-					font-weight: normal;
-				}
-			}
 			.gallary {
+				width: 90%;
 			    margin: 50px 5%;
 				#viewport {
 				    width: 100%;
@@ -625,6 +577,8 @@ $for_comments: #778899;
 					    padding: 0;
 					    transition: 1s;
 					    transition-timing-function: ease-in-out;
+					    align-items: center;
+    					display: flex;
 						ul, li {
 						    margin: 0;
 						    padding: 0;
@@ -636,7 +590,6 @@ $for_comments: #778899;
 						    float: left;
 							.slide-img {
 							    width: 100%;
-							    height: 400px;
 							}
 						}
 					}

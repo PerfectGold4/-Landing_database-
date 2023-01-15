@@ -156,21 +156,27 @@
 		<div class="comments">
 			<div class="inner_block">
 				<p class="just_text">Комментарии</p>
-				<div class="no_comment">
+				<div class="no_comment"></div>
+				<div class="all_comments">
+					<?php
+						$pdo = new PDO("mysql:host=localhost;dbname=landing", "root", "root");
+						$sql = 'SELECT * FROM comments';
+						$statement = $pdo->query($sql);
+						$comments = $statement->fetchAll(PDO::FETCH_ASSOC);
+						$comments_flip = array_reverse($comments);
+						foreach ($comments_flip as $comment):?>
+							<div class="the_comment">
+								<hr>
+								<h2 class="name"><?= $comment['name'];?></h2>
+								<p class="date"><?= $comment['date_time'];?></p>
+								<div class="outer_comment">
+									<p class="comment"><?= $comment['content'];?></p>
+								</div>
+							</div>
+						<?php endforeach;?>
 				</div>
-				<?php
-					$pdo = new PDO("mysql:host=localhost;dbname=landing", "root", "root");
-					$sql = 'SELECT * FROM comments';
-					$statement = $pdo->query($sql);
-					$comments = $statement->fetchAll(PDO::FETCH_ASSOC);
-					foreach ($comments as $comment):?>
-						<div class="the_comment">
-							<hr>
-							<h2 class="name"><?= $comment['name'];?></h2>
-							<p class="date"><?= $comment['date_time'];?></p>
-							<p class="comment"><?= $comment['content'];?></p>
-						</div>
-					<?php endforeach;?>
+				<div class="open_comments"><span>Показать следующие комментарии</span></div>
+				<div class="close_comments"><span>Скрыть комментарии</span></div>
 				<input class="user_name" data-toggle="tooltip" placeholder="Ваш ник...">
 				<textarea class="text_comm" data-toggle="tooltip" placeholder="Напишите комментарий..."></textarea>
 				<input type="submit" class="comm_butt">

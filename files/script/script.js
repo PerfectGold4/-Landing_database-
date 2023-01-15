@@ -14,6 +14,7 @@ $(function(){
 		$(butt).click(function(){
 			$(form).css({'visibility':'visible'})
 			$('main').css({'filter':'brightness(40%)'})
+			$('#prod_1, #prod_2, #prod_3').addClass("disabledbutton")
 			$('html, body').css({overflow: 'hidden'})
 		})
 	}
@@ -23,6 +24,7 @@ $(function(){
 			$(er_txt).css({'visibility':'hidden'})
 			$(input_data).val('')
 			$('main').css({'filter':'brightness(100%)'})
+			$('#prod_1, #prod_2, #prod_3').removeClass("disabledbutton")
 			$('html, body').css({overflow: 'auto'})
 		})
 	}
@@ -38,12 +40,29 @@ $(function(){
 	$('.back_fh').click(function(){
 		$('.fin_hid').css({'visibility':'hidden'})
 		$('main').css({'filter':'brightness(100%)'})
+		$('#prod_1, #prod_2, #prod_3').removeClass("disabledbutton")
 		$('html, body').css({overflow: 'auto'})
 	})
 /*оформление комментариев*/
 	if ($('.the_comment').length < 1) {
 		$('.no_comment').append('<p>Оставьте комментарий первым...</p>')
 	}
+	const style_comm = {'background':'-webkit-linear-gradient(#000, rgba(0, 0, 0, 0))', '-webkit-background-clip':'text', '-webkit-text-fill-color':'transparent'}
+	const no_style_comm = {'background':'none', '-webkit-background-clip':'none', '-webkit-text-fill-color':'currentColor'}
+	function oc_comms ($key_1, $key_2, $key_3) {
+		$('.open_comments').css('display', $key_1)
+		$('.close_comments, .the_comment:gt(4)').css('display', $key_2)
+		$('.the_comment:eq(4)').css($key_3)
+	}
+	if ($('.the_comment').length > 5) {
+		oc_comms ('inline', 'none', style_comm)
+	}
+	$('.open_comments').click(function(){
+		oc_comms ('none', 'block', no_style_comm)
+	})
+	$('.close_comments').click(function(){
+		oc_comms ('inline', 'none', style_comm)
+	})
 /*Оформление слайдера с картинками*/
 	var slideNow = 1;
 	var slideCount = $('#slidewrapper').children().length;
