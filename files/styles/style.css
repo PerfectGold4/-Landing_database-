@@ -27,75 +27,6 @@ body header p {
   color: #F0F8FF;
   background: #808080;
 }
-body section .hid {
-  width: 70%;
-  padding: 30px 0 70px 0;
-  z-index: 99999;
-  position: fixed;
-  margin: 5% 15%;
-  background: white;
-  border-radius: 10px;
-}
-body section .hid .back_hid {
-  width: 5%;
-  height: auto;
-  margin-left: 92%;
-  margin-bottom: 5px;
-}
-body section .hid div {
-  margin: 0 15%;
-}
-body section .hid div .txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 17px;
-  border: dotted 2px black;
-  text-align: center;
-}
-body section .hid form .mail {
-  margin: 10% 25% 2% 20%;
-}
-body section .hid form .mail .em_txt {
-  font-size: 17px;
-  font-weight: bold;
-  float: left;
-  margin-right: 3%;
-}
-body section .hid form .mail .butt {
-  margin-left: 10px;
-  width: 100px;
-}
-body section .hid .error {
-  z-index: 99999;
-  position: fixed;
-  padding-left: 11%;
-}
-body section .hid .error .error_txt {
-  color: red;
-}
-body section .fin_hid {
-  z-index: 99999;
-  position: fixed;
-  width: 50%;
-  padding: 30px 0 70px 0;
-  margin: 15% 25%;
-  background: white;
-  border-radius: 10px;
-}
-body section .fin_hid .back_fh {
-  width: 5%;
-  height: auto;
-  margin-left: 92%;
-  margin-bottom: 5px;
-}
-body section .fin_hid div {
-  margin: 0 15%;
-}
-body section .fin_hid div .fin_txt {
-  font-size: 17px;
-  text-align: center;
-}
 body main .pretty_back {
   background-image: url(../pictures/im/first-back.jpg);
   background-size: 100% auto;
@@ -252,6 +183,75 @@ body main .products .outer_pro div div:active {
 }
 body main .products .outer_pro div div:hover {
   background: #00FF00;
+}
+body main .products section .hid {
+  width: 70%;
+  padding: 30px 0 70px 0;
+  z-index: 99999;
+  position: fixed;
+  margin: 5% 15%;
+  background: white;
+  border-radius: 10px;
+}
+body main .products section .hid .back_hid {
+  width: 5%;
+  height: auto;
+  margin-left: 92%;
+  margin-bottom: 5px;
+}
+body main .products section .hid div {
+  margin: 0 15%;
+}
+body main .products section .hid div .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 17px;
+  border: dotted 2px black;
+  text-align: center;
+}
+body main .products section .hid form .mail {
+  margin: 10% 25% 2% 20%;
+}
+body main .products section .hid form .mail .em_txt {
+  font-size: 17px;
+  font-weight: bold;
+  float: left;
+  margin-right: 3%;
+}
+body main .products section .hid form .mail .butt {
+  margin-left: 10px;
+  width: 100px;
+}
+body main .products section .hid .error {
+  z-index: 99999;
+  position: fixed;
+  padding-left: 11%;
+}
+body main .products section .hid .error .error_txt {
+  color: red;
+}
+body main .products section .fin_hid {
+  z-index: 99999;
+  position: fixed;
+  width: 50%;
+  padding: 30px 0 70px 0;
+  margin: 15% 25%;
+  background: white;
+  border-radius: 10px;
+}
+body main .products section .fin_hid .back_fh {
+  width: 5%;
+  height: auto;
+  margin-left: 92%;
+  margin-bottom: 5px;
+}
+body main .products section .fin_hid div {
+  margin: 0 15%;
+}
+body main .products section .fin_hid div .fin_txt {
+  font-size: 17px;
+  text-align: center;
 }
 body main .comments {
   padding: 0% 15%;
