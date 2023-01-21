@@ -1,69 +1,145 @@
+//основные используемые для фона цвета
 $head-foot: #808080;
 $for_comments: #778899;
+//присваиваемый с помощью js класс для блокировки кнопок при открытой форме для отправки эл. почты в блоке products
 .disabledbutton {
-    pointer-events: none;}
-/*mixins*/
-	@mixin back_img($back-img) {
-		background-image: $back-img;
-		background-size: 100% auto;
-		background-repeat:no-repeat;
-	}
-	@mixin head($text-align, $letter-spacing, $font-size)  {
-		text-align: $text-align;
-		letter-spacing: $letter-spacing;
-		font-size: $font-size;
-		height: 30px;
-		padding: 10px 0px 35px 0px;
-		color: #F0F8FF;
-		background: $head-foot;
-	}
-	@mixin pretty_txt($font-size, $padding) {
-		font-size: $font-size;
-		padding: $padding;
-		color: white;
-		text-align:center;
-		font-weight: bold;
-		letter-spacing: 2px;
-	}
-	@mixin for_img_dec($margin, $float: left) {
-		margin: $margin;
-		float: $float;
-		width: 20%;
-	}
-	@mixin anim_block($pad-left, $size, $font-weight: normal, $text-transform: none) {
-		padding-left: $pad-left;
-		font-size: $size;
-		font-weight: $font-weight;
-		text-transform: $text-transform;
-	}
-	@mixin prod ($width, $height, $margin) {
-		width: $width;
-		height: $height;
-		margin: $margin;
-		float: left;
-		display: flex;
-		align-items: center;
-	}
-	@mixin hid_in_comments ($margin) {
-		margin: $margin;
-		@include back_img(url(../pictures/im/key.png));
-		position: relative;
-	}
-	@mixin butt_for_comm ($back_hov, $back) {
-		&:hover {
-			background: $back_hov;
-			border: 2px solid $back_hov;
-			}
-		width: fit-content;
-		padding: 2% 5px;
-		background: $back;
-		border: 2px solid $back;
-		border-radius: 3px;
-	}
+	pointer-events: none;
+}
+//mixins
+@mixin back_img($back-img) {
+	background-image: $back-img;
+	background-size: 100% auto;
+	background-repeat:no-repeat;
+}
+@mixin head($text-align, $letter-spacing, $font-size)  {
+	text-align: $text-align;
+	letter-spacing: $letter-spacing;
+	font-size: $font-size;
+	height: 30px;
+	padding: 10px 0px 35px 0px;
+	color: #F0F8FF;
+	background: $head-foot;
+}
+@mixin pretty_txt($font-size, $padding) {
+	font-size: $font-size;
+	padding: $padding;
+	color: white;
+	text-align:center;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+@mixin for_img_dec($margin, $float: left) {
+	margin: $margin;
+	float: $float;
+	width: 20%;
+}
+@mixin anim_block($pad-left, $size, $font-weight: normal, $text-transform: none) {
+	padding-left: $pad-left;
+	font-size: $size;
+	font-weight: $font-weight;
+	text-transform: $text-transform;
+}
+@mixin prod ($width, $height, $margin) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+	float: left;
+	display: flex;
+	align-items: center;
+}
+@mixin hid_in_comments ($margin) {
+	margin: $margin;
+	@include back_img(url(../pictures/im/key.png));
+	position: relative;
+}
+@mixin butt_for_comm ($back_hov, $back) {
+	&:hover {
+		background: $back_hov;
+		border: 2px solid $back_hov;
+		}
+	width: fit-content;
+	padding: 2% 5px;
+	background: $back;
+	border: 2px solid $back;
+	border-radius: 3px;
+}
+//удаление дефолтного scrollbara
 ::-webkit-scrollbar {
-		width: 0px;
-		background: transparent;
+	width: 0px;
+	background: transparent;
+}
+//стили для компьютерного экрана
+section {
+	.hid {
+		width: 70%;
+		padding: 30px 0 70px 0;
+		z-index: 99999;
+		position: fixed;
+		margin: 5% 15%;
+		background: white;
+		border-radius: 10px;
+		.back_hid {
+			width: 5%;
+			height: auto;
+			margin-left:92%;
+			margin-bottom: 5px;
+		}
+		div {
+			margin: 0 15%;
+			.txt {
+				display: flex;
+				font-size: 17px;
+				border: dotted 2px black;
+				text-align: center;
+			}
+		}
+		form {
+			.mail {
+				margin: 10% 25% 2% 20%;
+				.em_txt {
+					font-size: 17px;
+					font-weight: bold;
+					float: left;
+					margin-right: 3%;
+				}
+				.butt {
+					margin-left: 10px;
+					width: 100px;
+				}
+			}
+		}
+		.error {
+			z-index: 99999;
+			position: fixed;
+			padding-left: 11%;
+			.error_txt {
+				color: red;
+				}
+			}
+		}
+	.fin_hid {
+		z-index: 99999;
+		position: fixed;
+		width: 50%;
+		padding: 30px 0 70px 0;
+		margin: 15% 25%;
+		background: white;
+		border-radius: 10px;
+		.back_fh {
+			width: 5%;
+			height: auto;
+			margin-left:92%;
+			margin-bottom: 5px;
+		}
+		div {
+			margin: 0 15%;
+			.fin_txt {
+				font-size: 17px;
+				text-align: center;
+			}
+		}
 	}
+}
 body {
 	background: $for_comments;
 	user-select: none;
@@ -157,77 +233,6 @@ body {
 						border: 1px solid #32CD32;
 						border-radius: 2px;
 						box-shadow: 3px 5px 5px #999;
-					}
-				}
-			}
-			section {
-				.hid {
-					width: 70%;
-					padding: 30px 0 70px 0;
-					z-index: 99999;
-					position: fixed;
-					margin: 5% 15%;
-					background: white;
-					border-radius: 10px;
-					.back_hid {
-						width: 5%;
-						height: auto;
-						margin-left:92%;
-						margin-bottom: 5px;
-					}
-					div {
-						margin: 0 15%;
-						.txt {
-							display: flex;
-							font-size: 17px;
-							border: dotted 2px black;
-							text-align: center;
-						}
-					}
-					form {
-						.mail {
-							margin: 10% 25% 2% 20%;
-							.em_txt {
-								font-size: 17px;
-								font-weight: bold;
-								float: left;
-								margin-right: 3%;
-							}
-							.butt {
-								margin-left: 10px;
-								width: 100px;
-							}
-						}
-					}
-					.error {
-						z-index: 99999;
-						position: fixed;
-						padding-left: 11%;
-						.error_txt {
-							color: red;
-							}
-						}
-					}
-				.fin_hid {
-					z-index: 99999;
-					position: fixed;
-					width: 50%;
-					padding: 30px 0 70px 0;
-					margin: 15% 25%;
-					background: white;
-					border-radius: 10px;
-					.back_fh {
-						width: 5%;
-						height: auto;
-						margin-left:92%;
-						margin-bottom: 5px;
-					}
-					div {
-						margin: 0 15%;
-						.fin_txt {
-							font-size: 17px;
-							text-align: center;
-						}
 					}
 				}
 			}
@@ -379,81 +384,82 @@ body {
 		}
 	}
 }
+//стили для мобильного экрана
 @media (max-width: 1250px) {
-	body {
-		section {
-			.hid {
-				width: 90%;
-				padding: 30px 0 70px 0;
-				z-index: 99999;
-				position: fixed;
-				margin: 5% 5%;
-				background: white;
-				border-radius: 10px;
-				.back_hid {
-					width: 7%;
-					height: auto;
-					margin-left:88%;
-					margin-bottom: 5px;
+	section {
+		.hid {
+			width: 90%;
+			padding: 30px 0 70px 0;
+			z-index: 99999;
+			position: fixed;
+			margin: 5% 5%;
+			background: white;
+			border-radius: 10px;
+			.back_hid {
+				width: 7%;
+				height: auto;
+				margin-left:88%;
+				margin-bottom: 5px;
+			}
+			.div_txt {
+				margin: 0 15%;
+				.txt {
+					display: flex;
+					font-size: 17px;
+					border: dotted 2px black;
+					text-align: center;
 				}
-				.div_txt {
-					margin: 0 15%;
-					.txt {
-						display: flex;
+			}
+			form {
+				.mail {
+					display: flex;
+					flex-direction: column;
+					margin: 10% 25% 2% 20%;
+					.em_txt {
 						font-size: 17px;
-						border: dotted 2px black;
-						text-align: center;
+						font-weight: bold;
+						float: left;
+						margin: 3% auto;
 					}
-				}
-				form {
-					.mail {
-						display: flex;
-						flex-direction: column;
-						margin: 10% 25% 2% 20%;
-						.em_txt {
-							font-size: 17px;
-							font-weight: bold;
-							float: left;
-							margin: 3% auto;
-						}
-						.butt {
-							width: 100px;
-							margin: 3% auto;
-						}
-					}
-				}
-				.error {
-					z-index: 99999;
-					position: fixed;
-					width: 90%;
-					.error_txt {
-						color: red;
-						}
-					}
-				}
-			.fin_hid {
-				z-index: 99999;
-				position: fixed;
-				width: 75%;
-				padding: 30px 0 70px 0;
-				margin: 15% 13%;
-				background: white;
-				border-radius: 10px;
-				.back_fh {
-					width: 7%;
-					height: auto;
-					margin-left:85%;
-					margin-bottom: 5px;
-				}
-				.fin_div {
-					margin: 0 15%;
-					.fin_txt {
-						font-size: 20px;
-						text-align: center;
+					.butt {
+						width: 100px;
+						margin: 3% auto;
 					}
 				}
 			}
+			.error {
+				z-index: 99999;
+				position: fixed;
+				width: 90%;
+				.error_txt {
+					color: red;
+					}
+				}
+			}
+		.fin_hid {
+			z-index: 99999;
+			position: fixed;
+			width: 75%;
+			padding: 30px 0 70px 0;
+			margin: 15% 13%;
+			background: white;
+			border-radius: 10px;
+			.back_fh {
+				width: 7%;
+				height: auto;
+				margin-left:85%;
+				margin-bottom: 5px;
+			}
+			.fin_div {
+				margin: 0 15%;
+				.fin_txt {
+					font-size: 20px;
+					text-align: center;
+				}
+			}
 		}
+	}
+	body {
 		main {
 			.pretty_back {
 				@include back_img(url(../pictures/im/first-back.jpg));

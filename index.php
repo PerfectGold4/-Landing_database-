@@ -9,89 +9,89 @@
 	<link rel='stylesheet' type='text/css' href='files/styles/not_mine/reset.css'>
 	<link rel='stylesheet' type='text/css' href='files/styles/style.css'>
 </head>
+<!--спрятанные блоки для блока products - формы для отправки эл. почты-->
+<section>
+	<div class='hid' id='hidden_1'>
+		<img src='files/pictures/im/close.png' class='back_hid' id='back_1'>
+		<div class='div_txt'>
+			<p class='txt'>
+				Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я
+			</p>
+		</div>
+		<form>
+			<div class='mail'>
+				<p class='em_txt'>
+					Введите ваш е-mail:
+				</p>
+				<input name='email' class='data_1' maxlength='25' placeholder='Введите ваш e-mail...'>
+			<input type='submit' name='submit' class='butt' id='butt_1'>
+			</div>
+		</form>
+		<div class='error'>
+			<p class='error_txt' id='er_1'>
+				Вы не указали ваш e-mail!
+			</p>
+		</div>
+	</div>
+	<div class='hid' id='hidden_2'>
+		<img src='files/pictures/im/close.png' class='back_hid' id='back_2'>
+		<div class='div_txt'>
+			<p class='txt'>
+				Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь
+			</p>
+		</div>
+		<form>
+			<div class='mail'>
+				<p class='em_txt'>
+					Введите ваш е-mail:
+				</p>
+				<input name='email' class='data_2' maxlength='25' placeholder='Введите ваш e-mail...'>
+				<input type='submit' name='submit' class='butt' id='butt_2'>
+			</div>
+		</form>
+		<div class='error'>
+			<p class='error_txt' id='er_2'>
+				Вы не указали ваш e-mail!
+			</p>
+		</div>
+	</div>
+	<div class='hid' id='hidden_3'>
+		<img src='files/pictures/im/close.png' class='back_hid' id='back_3'>
+		<div class='div_txt'>
+			<p class='txt'>
+				Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры
+			</p>
+		</div>
+		<form>
+			<div class='mail'>
+				<p class='em_txt'>
+					Введите ваш е-mail:
+				</p>
+				<input name='email' class='data_3' maxlength='25' placeholder='Введите ваш e-mail...'>
+				<input type='submit' name='submit' class='butt' id='butt_3'>
+			</div>
+		</form>
+		<div class='error'>
+			<p class='error_txt' id='er_3'>
+				Вы не указали ваш e-mail!
+			</p>
+		</div>
+	</div>
+	<div class='fin_hid'>
+		<img src='files/pictures/im/close.png' class='back_fh'>
+		<div class='fin_div'>
+			<p class='fin_txt'>
+				Спасибо! Наш работник свяжется с вами.
+			</p>
+		</div>
+	</div>
+</section>
 <body>
 	<header>
 		<p>
 			Название
 		</p>
 	</header>
-	<!--спрятанные блоки для блока products - формы для отправки эл. почты-->
-	<section>
-		<div class='hid' id='hidden_1'>
-			<img src='files/pictures/im/close.png' class='back_hid' id='back_1'>
-			<div class='div_txt'>
-				<p class='txt'>
-					Услуга по созданию для вас особенного и неповторимого образа, благодаря которому вы наконец сможете показать всем своё внутреннее Я
-				</p>
-			</div>
-			<form>
-				<div class='mail'>
-					<p class='em_txt'>
-						Введите ваш е-mail:
-					</p>
-					<input name='email' class='data_1' maxlength='25' placeholder='Введите ваш e-mail...'>
-					<input type='submit' name='submit' class='butt' id='butt_1'>
-				</div>
-			</form>
-			<div class='error'>
-				<p class='error_txt' id='er_1'>
-					Вы не указали ваш e-mail!
-				</p>
-			</div>
-		</div>
-		<div class='hid' id='hidden_2'>
-			<img src='files/pictures/im/close.png' class='back_hid' id='back_2'>
-			<div class='div_txt'>
-				<p class='txt'>
-					Услуга по созданию дизайна в вашем доме, ведь для того, чтобы привнести красоту в свой мир, нужно начать с того места где ты живешь
-				</p>
-			</div>
-			<form>
-				<div class='mail'>
-					<p class='em_txt'>
-						Введите ваш е-mail:
-					</p>
-					<input name='email' class='data_2' maxlength='25' placeholder='Введите ваш e-mail...'>
-					<input type='submit' name='submit' class='butt' id='butt_2'>
-				</div>
-			</form>
-			<div class='error'>
-				<p class='error_txt' id='er_2'>
-					Вы не указали ваш e-mail!
-				</p>
-			</div>
-		</div>
-		<div class='hid' id='hidden_3'>
-			<img src='files/pictures/im/close.png' class='back_hid' id='back_3'>
-			<div class='div_txt'>
-				<p class='txt'>
-					Объединение двух предыдущих услуг, специально для вас мы создадим вам особенный образ и невероятный дизайн квартиры
-				</p>
-			</div>
-			<form>
-				<div class='mail'>
-					<p class='em_txt'>
-						Введите ваш е-mail:
-					</p>
-					<input name='email' class='data_3' maxlength='25' placeholder='Введите ваш e-mail...'>
-					<input type='submit' name='submit' class='butt' id='butt_3'>
-				</div>
-			</form>
-			<div class='error'>
-				<p class='error_txt' id='er_3'>
-					Вы не указали ваш e-mail!
-				</p>
-			</div>
-		</div>
-		<div class='fin_hid'>
-			<img src='files/pictures/im/close.png' class='back_fh'>
-			<div class='fin_div'>
-				<p class='fin_txt'>
-					Спасибо! Наш работник свяжется с вами.
-				</p>
-			</div>
-		</div>
-	</section>
 	<main>
 		<!--текст с задним фоном-фото-->
 		<div class='pretty_back'>

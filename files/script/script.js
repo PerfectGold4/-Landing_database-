@@ -1,5 +1,5 @@
 $(function(){
-/*декоративное появление блока*/
+/*появление блока при прокрутке страницы*/
 	$('p', '.anim_decor').fadeOut()
 	$('img', '.anim_decor').fadeOut()
 	$(window).scroll(function(){
@@ -8,7 +8,7 @@ $(function(){
 				$('img', '.anim_decor').fadeIn(800)
 			}
 		})
-/*оформление отправки эл. почты*/
+/*работа с section, блоки появляются для отправки эл. почты; при нажатии кнопки с услугой появляется блок для отправки эл. почты (также предусмотрено сообщение при попытке отправить пустую строку), затем высвечивается ответный блок*/
 	$('.hid,.fin_hid,.error').css({'visibility':'hidden'})
 	function butt_prod(butt, form) {
 		$(butt).click(function(){
@@ -43,9 +43,12 @@ $(function(){
 		$('#prod_1, #prod_2, #prod_3').removeClass("disabledbutton")
 		$('html, body').css({overflow: 'auto'})
 	})
-/*оформление комментариев*/
+/*оформление блока с комментариями (кнопки для развертывания/свертывания истории комментариев, надпись при отсутствии комментариев)*/
 	if ($('.the_comment').length < 1) {
 		$('.no_comment').append('<p>Оставьте комментарий первым...</p>')
+	}
+	if ($('.the_comment').length < 6) {
+		$('.open_comments, .close_comments').css('display', 'none')
 	}
 	const style_comm = {'background':'-webkit-linear-gradient(#000, rgba(0, 0, 0, 0))', '-webkit-background-clip':'text', '-webkit-text-fill-color':'transparent'}
 	const no_style_comm = {'background':'none', '-webkit-background-clip':'none', '-webkit-text-fill-color':'currentColor'}
@@ -63,7 +66,7 @@ $(function(){
 	$('.close_comments').click(function(){
 		oc_comms ('inline', 'none', style_comm)
 	})
-/*Оформление слайдера с картинками*/
+/*оформление слайдера с картинками; работает как линейка с прокруткой при нажатии на кнопку*/
 	var slideNow = 1;
 	var slideCount = $('#slidewrapper').children().length;
 	var translateWidth = 0;
